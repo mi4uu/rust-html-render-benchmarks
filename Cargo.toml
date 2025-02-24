@@ -3,65 +3,88 @@ name = "ssr_template_benchmarks"
 version = "0.1.0"
 edition = "2021"
 
+[features]
+default = []
+hyped = ["dep:hyped"]
+maud = ["dep:maud"]
+askama = ["dep:askama"]
+tera = ["dep:tera"]
+tinytemplate = ["dep:tinytemplate"]
+handlebars = ["dep:handlebars"]
+minijinja = ["dep:minijinja"]
+html_node = ["dep:html-node"]
+hypertext = ["dep:hypertext"]
+vy = ["dep:vy"]
+fhtml = ["dep:fhtml"]
+
 [dependencies]
-hyped = { git = "https://github.com/swlkr/hyped" }
+hyped = { git = "https://github.com/swlkr/hyped", optional = true }
 divan = "0.1.8"
-maud = { version = "0.25.0" }
-askama = "0.12.1"
-tera = "1.19.1"
+maud = { version = "0.25.0", optional = true }
+askama = { version = "0.12.1", optional = true }
+tera = { version = "1.19.1", optional = true }
 serde = { version = "1.0.195", features = ["derive"] }
 lazy_static = "1.4.0"
-tinytemplate = { git = "https://github.com/johnbartholomew/TinyTemplate", branch = "sync" }
-handlebars = "5.0.0"
+tinytemplate = { git = "https://github.com/johnbartholomew/TinyTemplate", branch = "sync", optional = true }
+handlebars = { version = "5.0.0", optional = true }
 serde_json = "1.0.111"
-minijinja = "1.0.10"
-html-node = "0.5.0"
-hypertext = "0.3.0"
-vy = "0.1.1"
-fhtml = "0.6.1"
+minijinja = { version = "1.0.10", optional = true }
+html-node = { version = "0.5.0", optional = true }
+hypertext = { version = "0.3.0", optional = true }
+vy = { version = "0.1.1", optional = true }
+fhtml = { version = "0.6.1", optional = true }
 
 [[bench]]
 name = "hyped"
 harness = false
+required-features = ["hyped"]
 
 [[bench]]
 name = "maud"
 harness = false
+required-features = ["maud"]
 
 [[bench]]
 name = "askama"
 harness = false
+required-features = ["askama"]
 
 [[bench]]
 name = "tera"
 harness = false
+required-features = ["tera"]
 
 [[bench]]
 name = "tinytemplate"
 harness = false
+required-features = ["tinytemplate"]
 
 [[bench]]
 name = "handlebars"
 harness = false
+required-features = ["handlebars"]
 
 [[bench]]
 name = "minijinja"
 harness = false
+required-features = ["minijinja"]
 
 [[bench]]
 name = "html_node"
 harness = false
+required-features = ["html_node"]
 
 [[bench]]
 name = "hypertext"
 harness = false
-
+required-features = ["hypertext"]
 
 [[bench]]
 name = "vy"
 harness = false
-
+required-features = ["vy"]
 
 [[bench]]
 name = "fhtml"
 harness = false
+required-features = ["fhtml"]
