@@ -178,19 +178,19 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
     <td>Fresh units:</td><td>0</td>
   </tr>
   <tr>
-    <td>Dirty units:</td><td>39</td>
+    <td>Dirty units:</td><td>29</td>
   </tr>
   <tr>
-    <td>Total units:</td><td>39</td>
+    <td>Total units:</td><td>29</td>
   </tr>
   <tr>
     <td>Max concurrency:</td><td>2 (jobs=2 ncpu=2)</td>
   </tr>
   <tr>
-    <td>Build start:</td><td>2025-02-24T05:04:50Z</td>
+    <td>Build start:</td><td>2025-02-24T05:12:35Z</td>
   </tr>
   <tr>
-    <td>Total time:</td><td>21.5s</td>
+    <td>Total time:</td><td>16.9s</td>
   </tr>
   <tr>
     <td>rustc:</td><td>rustc 1.87.0-nightly (f8a913b13 2025-02-23)<br>Host: x86_64-unknown-linux-gnu<br>Target: x86_64-unknown-linux-gnu</td>
@@ -236,85 +236,53 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 <tr>
   <td>1.</td>
   <td>clap_builder v4.4.12</td>
-  <td>12.3s</td>
-  <td>10.2s (83%)</td>
+  <td>12.6s</td>
+  <td>10.2s (81%)</td>
   <td>env, help, std, wrap_help</td>
 </tr>
 
 <tr>
   <td>2.</td>
   <td>divan v0.1.8</td>
-  <td>4.7s</td>
-  <td>3.8s (81%)</td>
+  <td>5.4s</td>
+  <td>4.6s (86%)</td>
   <td>default, help, wrap_help</td>
 </tr>
 
 <tr>
   <td>3.</td>
   <td>syn v2.0.48</td>
-  <td>3.4s</td>
-  <td>1.4s (43%)</td>
-  <td>clone-impls, default, derive, full, parsing, printing, proc-macro, quote</td>
+  <td>3.6s</td>
+  <td>1.4s (39%)</td>
+  <td>full, parsing, printing, proc-macro, quote</td>
 </tr>
 
 <tr>
   <td>4.</td>
   <td>regex-lite v0.1.5</td>
-  <td>3.1s</td>
-  <td>2.5s (81%)</td>
+  <td>3.2s</td>
+  <td>2.7s (82%)</td>
   <td>std, string</td>
 </tr>
 
 <tr>
   <td>5.</td>
-  <td>serde_json v1.0.111</td>
-  <td>3.0s</td>
-  <td>2.1s (71%)</td>
-  <td>default, std</td>
-</tr>
-
-<tr>
-  <td>6.</td>
-  <td>serde_derive v1.0.195</td>
-  <td>3.0s</td>
-  <td></td>
-  <td>default</td>
-</tr>
-
-<tr>
-  <td>7.</td>
-  <td>serde v1.0.195</td>
-  <td>3.0s</td>
-  <td>0.2s (5%)</td>
-  <td>default, derive, serde_derive, std</td>
-</tr>
-
-<tr>
-  <td>8.</td>
   <td>rustix v0.38.28</td>
   <td>1.2s</td>
-  <td>0.6s (50%)</td>
+  <td>0.5s (44%)</td>
   <td>alloc, default, std, termios, use-libc-auxv</td>
 </tr>
 
 <tr>
-  <td>9.</td>
+  <td>6.</td>
   <td>ssr_template_benchmarks v0.1.0 bench "hyped" (test)</td>
-  <td>1.1s</td>
+  <td>1.0s</td>
   <td></td>
   <td>default, hyped</td>
 </tr>
 
 <tr>
-  <td>10.</td>
-  <td>proc-macro2 v1.0.75</td>
-  <td>0.7s</td>
-  <td>0.3s (42%)</td>
-  <td>default, proc-macro</td>
-</tr>
-
-<tr>
-  <td>11.</td>
+  <td>7.</td>
   <td>hyped v0.1.0</td>
   <td>0.6s</td>
   <td>0.3s (46%)</td>
@@ -322,7 +290,23 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>12.</td>
+  <td>8.</td>
+  <td>proc-macro2 v1.0.75</td>
+  <td>0.6s</td>
+  <td>0.2s (35%)</td>
+  <td>default, proc-macro</td>
+</tr>
+
+<tr>
+  <td>9.</td>
+  <td>libc v0.2.151</td>
+  <td>0.5s</td>
+  <td>0.0s (7%)</td>
+  <td>default, std</td>
+</tr>
+
+<tr>
+  <td>10.</td>
   <td>divan-macros v0.1.8</td>
   <td>0.5s</td>
   <td></td>
@@ -330,31 +314,31 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>13.</td>
-  <td>libc v0.2.151</td>
-  <td>0.5s</td>
-  <td>0.0s (5%)</td>
-  <td>default, std</td>
-</tr>
-
-<tr>
-  <td>14.</td>
+  <td>11.</td>
   <td>linux-raw-sys v0.4.12</td>
   <td>0.4s</td>
-  <td>0.0s (8%)</td>
+  <td>0.0s (6%)</td>
   <td>elf, errno, general, ioctl, no_std</td>
 </tr>
 
 <tr>
-  <td>15.</td>
+  <td>12.</td>
   <td>bitflags v2.4.1</td>
-  <td>0.3s</td>
+  <td>0.4s</td>
   <td>0.2s (67%)</td>
   <td>std</td>
 </tr>
 
 <tr>
-  <td>16.</td>
+  <td>13.</td>
+  <td>clap_lex v0.6.0</td>
+  <td>0.3s</td>
+  <td>0.2s (65%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>14.</td>
   <td>seq-macro v0.3.5</td>
   <td>0.3s</td>
   <td></td>
@@ -362,47 +346,23 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>17.</td>
-  <td>clap_lex v0.6.0</td>
-  <td>0.3s</td>
-  <td>0.2s (66%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>18.</td>
-  <td>ryu v1.0.19</td>
-  <td>0.3s</td>
-  <td>0.2s (65%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>19.</td>
+  <td>15.</td>
   <td>quote v1.0.35</td>
-  <td>0.2s</td>
-  <td>0.1s (33%)</td>
-  <td>default, proc-macro</td>
+  <td>0.3s</td>
+  <td>0.1s (35%)</td>
+  <td>proc-macro</td>
 </tr>
 
 <tr>
-  <td>20.</td>
-  <td>rustix v0.38.28 build script</td>
-  <td>0.2s</td>
-  <td></td>
-  <td>alloc, default, std, termios, use-libc-auxv</td>
-</tr>
-
-<tr>
-  <td>21.</td>
+  <td>16.</td>
   <td>anstyle v1.0.4</td>
   <td>0.2s</td>
-  <td>0.1s (35%)</td>
+  <td>0.1s (37%)</td>
   <td>default, std</td>
 </tr>
 
 <tr>
-  <td>22.</td>
+  <td>17.</td>
   <td>libc v0.2.151 build script</td>
   <td>0.2s</td>
   <td></td>
@@ -410,31 +370,23 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>23.</td>
-  <td>proc-macro2 v1.0.75 build script</td>
+  <td>18.</td>
+  <td>rustix v0.38.28 build script</td>
   <td>0.2s</td>
+  <td></td>
+  <td>alloc, default, std, termios, use-libc-auxv</td>
+</tr>
+
+<tr>
+  <td>19.</td>
+  <td>proc-macro2 v1.0.75 build script</td>
+  <td>0.1s</td>
   <td></td>
   <td>default, proc-macro</td>
 </tr>
 
 <tr>
-  <td>24.</td>
-  <td>serde v1.0.195 build script</td>
-  <td>0.1s</td>
-  <td></td>
-  <td>default, derive, serde_derive, std</td>
-</tr>
-
-<tr>
-  <td>25.</td>
-  <td>itoa v1.0.10</td>
-  <td>0.1s</td>
-  <td>0.0s (25%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>26.</td>
+  <td>20.</td>
   <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks" (test)</td>
   <td>0.1s</td>
   <td></td>
@@ -442,15 +394,7 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>27.</td>
-  <td>serde_json v1.0.111 build script</td>
-  <td>0.1s</td>
-  <td></td>
-  <td>default, std</td>
-</tr>
-
-<tr>
-  <td>28.</td>
+  <td>21.</td>
   <td>terminal_size v0.3.0</td>
   <td>0.1s</td>
   <td>0.0s (48%)</td>
@@ -458,7 +402,7 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>29.</td>
+  <td>22.</td>
   <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks"</td>
   <td>0.1s</td>
   <td></td>
@@ -466,15 +410,23 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>30.</td>
+  <td>23.</td>
   <td>unicode-ident v1.0.12</td>
   <td>0.1s</td>
-  <td>0.0s (30%)</td>
+  <td>0.0s (19%)</td>
   <td></td>
 </tr>
 
 <tr>
-  <td>31.</td>
+  <td>24.</td>
+  <td>condtype v1.3.0</td>
+  <td>0.1s</td>
+  <td>0.0s (26%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>25.</td>
   <td>proc-macro2 v1.0.75 build script (run)</td>
   <td>0.0s</td>
   <td></td>
@@ -482,31 +434,7 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>32.</td>
-  <td>lazy_static v1.4.0</td>
-  <td>0.0s</td>
-  <td>0.0s (34%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>33.</td>
-  <td>clap v4.4.13</td>
-  <td>0.0s</td>
-  <td>0.0s (38%)</td>
-  <td>env, help, std, wrap_help</td>
-</tr>
-
-<tr>
-  <td>34.</td>
-  <td>condtype v1.3.0</td>
-  <td>0.0s</td>
-  <td>0.0s (27%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>35.</td>
+  <td>26.</td>
   <td>rustix v0.38.28 build script (run)</td>
   <td>0.0s</td>
   <td></td>
@@ -514,32 +442,24 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>36.</td>
+  <td>27.</td>
+  <td>clap v4.4.13</td>
+  <td>0.0s</td>
+  <td>0.0s (44%)</td>
+  <td>env, help, std, wrap_help</td>
+</tr>
+
+<tr>
+  <td>28.</td>
   <td>cfg-if v1.0.0</td>
   <td>0.0s</td>
-  <td>0.0s (33%)</td>
+  <td>0.0s (32%)</td>
   <td></td>
 </tr>
 
 <tr>
-  <td>37.</td>
-  <td>serde v1.0.195 build script (run)</td>
-  <td>0.0s</td>
-  <td></td>
-  <td>default, derive, serde_derive, std</td>
-</tr>
-
-<tr>
-  <td>38.</td>
+  <td>29.</td>
   <td>libc v0.2.151 build script (run)</td>
-  <td>0.0s</td>
-  <td></td>
-  <td>default, std</td>
-</tr>
-
-<tr>
-  <td>39.</td>
-  <td>serde_json v1.0.111 build script (run)</td>
   <td>0.0s</td>
   <td></td>
   <td>default, std</td>
@@ -547,18 +467,20 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tbody>
 </table>
 <script>
-DURATION = 22;
+DURATION = 17;
 const UNIT_DATA = [
   {
     "i": 0,
-    "name": "unicode-ident",
-    "version": "1.0.12",
+    "name": "rustix",
+    "version": "0.38.28",
     "mode": "todo",
-    "target": "",
+    "target": " build script",
     "start": 0.07,
-    "duration": 0.07,
-    "rmeta_time": 0.05,
-    "unlocked_units": [],
+    "duration": 0.19,
+    "rmeta_time": null,
+    "unlocked_units": [
+      3
+    ],
     "unlocked_rmeta_units": []
   },
   {
@@ -568,50 +490,46 @@ const UNIT_DATA = [
     "mode": "todo",
     "target": " build script",
     "start": 0.07,
-    "duration": 0.16,
+    "duration": 0.14,
     "rmeta_time": null,
     "unlocked_units": [
-      3
+      2
     ],
     "unlocked_rmeta_units": []
   },
   {
     "i": 2,
-    "name": "rustix",
-    "version": "0.38.28",
-    "mode": "todo",
-    "target": " build script",
-    "start": 0.14,
-    "duration": 0.2,
-    "rmeta_time": null,
-    "unlocked_units": [
-      5
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 3,
     "name": "proc-macro2",
     "version": "1.0.75",
     "mode": "run-custom-build",
     "target": " build script (run)",
-    "start": 0.23,
-    "duration": 0.05,
+    "start": 0.22,
+    "duration": 0.04,
     "rmeta_time": null,
-    "unlocked_units": [
-      4
-    ],
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 3,
+    "name": "rustix",
+    "version": "0.38.28",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 0.26,
+    "duration": 0.04,
+    "rmeta_time": null,
+    "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 4,
-    "name": "proc-macro2",
-    "version": "1.0.75",
+    "name": "unicode-ident",
+    "version": "1.0.12",
     "mode": "todo",
     "target": "",
-    "start": 0.28,
-    "duration": 0.66,
-    "rmeta_time": 0.38,
+    "start": 0.26,
+    "duration": 0.06,
+    "rmeta_time": 0.05,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
       7
@@ -619,13 +537,13 @@ const UNIT_DATA = [
   },
   {
     "i": 5,
-    "name": "rustix",
-    "version": "0.38.28",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 0.35,
-    "duration": 0.03,
-    "rmeta_time": null,
+    "name": "bitflags",
+    "version": "2.4.1",
+    "mode": "todo",
+    "target": "",
+    "start": 0.3,
+    "duration": 0.36,
+    "rmeta_time": 0.12,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
@@ -635,89 +553,130 @@ const UNIT_DATA = [
     "version": "0.4.12",
     "mode": "todo",
     "target": "",
-    "start": 0.38,
-    "duration": 0.37,
-    "rmeta_time": 0.34,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 7,
-    "name": "quote",
-    "version": "1.0.35",
-    "mode": "todo",
-    "target": "",
-    "start": 0.75,
-    "duration": 0.23,
-    "rmeta_time": 0.16,
+    "start": 0.33,
+    "duration": 0.41,
+    "rmeta_time": 0.38,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
       8
     ]
   },
   {
-    "i": 8,
-    "name": "syn",
-    "version": "2.0.48",
+    "i": 7,
+    "name": "proc-macro2",
+    "version": "1.0.75",
     "mode": "todo",
     "target": "",
-    "start": 0.95,
-    "duration": 3.39,
-    "rmeta_time": 1.95,
-    "unlocked_units": [
-      18,
-      25
-    ],
-    "unlocked_rmeta_units": []
+    "start": 0.66,
+    "duration": 0.56,
+    "rmeta_time": 0.36,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      9
+    ]
   },
   {
-    "i": 9,
-    "name": "bitflags",
-    "version": "2.4.1",
+    "i": 8,
+    "name": "rustix",
+    "version": "0.38.28",
     "mode": "todo",
     "target": "",
-    "start": 0.98,
-    "duration": 0.32,
-    "rmeta_time": 0.11,
+    "start": 0.73,
+    "duration": 1.18,
+    "rmeta_time": 0.66,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
       10
     ]
   },
   {
-    "i": 10,
-    "name": "rustix",
-    "version": "0.38.28",
+    "i": 9,
+    "name": "quote",
+    "version": "1.0.35",
     "mode": "todo",
     "target": "",
-    "start": 1.3,
-    "duration": 1.17,
-    "rmeta_time": 0.58,
+    "start": 1.22,
+    "duration": 0.26,
+    "rmeta_time": 0.17,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
-      11
+      16
     ]
   },
   {
-    "i": 11,
+    "i": 10,
     "name": "terminal_size",
     "version": "0.3.0",
     "mode": "todo",
     "target": "",
-    "start": 2.47,
-    "duration": 0.08,
-    "rmeta_time": 0.04,
+    "start": 1.48,
+    "duration": 0.09,
+    "rmeta_time": 0.05,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 12,
+    "i": 11,
     "name": "libc",
     "version": "0.2.151",
     "mode": "todo",
     "target": " build script",
-    "start": 2.55,
-    "duration": 0.18,
+    "start": 1.57,
+    "duration": 0.19,
+    "rmeta_time": null,
+    "unlocked_units": [
+      15
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 12,
+    "name": "clap_lex",
+    "version": "0.6.0",
+    "mode": "todo",
+    "target": "",
+    "start": 1.76,
+    "duration": 0.32,
+    "rmeta_time": 0.11,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 13,
+    "name": "anstyle",
+    "version": "1.0.4",
+    "mode": "todo",
+    "target": "",
+    "start": 1.91,
+    "duration": 0.22,
+    "rmeta_time": 0.14,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      14
+    ]
+  },
+  {
+    "i": 14,
+    "name": "clap_builder",
+    "version": "4.4.12",
+    "mode": "todo",
+    "target": "",
+    "start": 2.07,
+    "duration": 12.56,
+    "rmeta_time": 2.34,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      18
+    ]
+  },
+  {
+    "i": 15,
+    "name": "libc",
+    "version": "0.2.151",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 2.14,
+    "duration": 0.02,
     "rmeta_time": null,
     "unlocked_units": [
       19
@@ -725,334 +684,166 @@ const UNIT_DATA = [
     "unlocked_rmeta_units": []
   },
   {
-    "i": 13,
-    "name": "clap_lex",
-    "version": "0.6.0",
-    "mode": "todo",
-    "target": "",
-    "start": 2.73,
-    "duration": 0.3,
-    "rmeta_time": 0.1,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 14,
-    "name": "anstyle",
-    "version": "1.0.4",
-    "mode": "todo",
-    "target": "",
-    "start": 3.03,
-    "duration": 0.2,
-    "rmeta_time": 0.13,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      17
-    ]
-  },
-  {
-    "i": 15,
-    "name": "serde",
-    "version": "1.0.195",
-    "mode": "todo",
-    "target": " build script",
-    "start": 3.23,
-    "duration": 0.13,
-    "rmeta_time": null,
-    "unlocked_units": [
-      16
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
     "i": 16,
-    "name": "serde",
-    "version": "1.0.195",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 3.35,
-    "duration": 0.03,
-    "rmeta_time": null,
-    "unlocked_units": [],
+    "name": "syn",
+    "version": "2.0.48",
+    "mode": "todo",
+    "target": "",
+    "start": 2.16,
+    "duration": 3.59,
+    "rmeta_time": 2.18,
+    "unlocked_units": [
+      17
+    ],
     "unlocked_rmeta_units": []
   },
   {
     "i": 17,
-    "name": "clap_builder",
-    "version": "4.4.12",
+    "name": "divan-macros",
+    "version": "0.1.8",
     "mode": "todo",
     "target": "",
-    "start": 3.38,
-    "duration": 12.3,
-    "rmeta_time": 2.15,
+    "start": 5.75,
+    "duration": 0.52,
+    "rmeta_time": null,
     "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      24
-    ]
+    "unlocked_rmeta_units": []
   },
   {
     "i": 18,
-    "name": "serde_derive",
-    "version": "1.0.195",
+    "name": "clap",
+    "version": "4.4.13",
     "mode": "todo",
     "target": "",
-    "start": 4.34,
-    "duration": 3.04,
-    "rmeta_time": null,
-    "unlocked_units": [
-      23
-    ],
+    "start": 6.27,
+    "duration": 0.04,
+    "rmeta_time": 0.02,
+    "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 19,
     "name": "libc",
     "version": "0.2.151",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 7.38,
-    "duration": 0.02,
-    "rmeta_time": null,
-    "unlocked_units": [
-      22
-    ],
+    "mode": "todo",
+    "target": "",
+    "start": 6.31,
+    "duration": 0.54,
+    "rmeta_time": 0.5,
+    "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 20,
-    "name": "serde_json",
-    "version": "1.0.111",
+    "name": "regex-lite",
+    "version": "0.1.5",
     "mode": "todo",
-    "target": " build script",
-    "start": 7.4,
-    "duration": 0.09,
-    "rmeta_time": null,
-    "unlocked_units": [
-      21
-    ],
+    "target": "",
+    "start": 6.85,
+    "duration": 3.24,
+    "rmeta_time": 0.58,
+    "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 21,
-    "name": "serde_json",
-    "version": "1.0.111",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 7.48,
-    "duration": 0.0,
-    "rmeta_time": null,
+    "name": "condtype",
+    "version": "1.3.0",
+    "mode": "todo",
+    "target": "",
+    "start": 10.09,
+    "duration": 0.06,
+    "rmeta_time": 0.04,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 22,
-    "name": "libc",
-    "version": "0.2.151",
+    "name": "seq-macro",
+    "version": "0.3.5",
     "mode": "todo",
     "target": "",
-    "start": 7.49,
-    "duration": 0.48,
-    "rmeta_time": 0.46,
-    "unlocked_units": [],
+    "start": 10.15,
+    "duration": 0.31,
+    "rmeta_time": null,
+    "unlocked_units": [
+      25
+    ],
     "unlocked_rmeta_units": []
   },
   {
     "i": 23,
-    "name": "serde",
-    "version": "1.0.195",
+    "name": "cfg-if",
+    "version": "1.0.0",
     "mode": "todo",
     "target": "",
-    "start": 7.97,
-    "duration": 3.03,
-    "rmeta_time": 2.88,
+    "start": 10.46,
+    "duration": 0.03,
+    "rmeta_time": 0.02,
     "unlocked_units": [],
-    "unlocked_rmeta_units": []
+    "unlocked_rmeta_units": [
+      24
+    ]
   },
   {
     "i": 24,
-    "name": "clap",
-    "version": "4.4.13",
+    "name": "divan",
+    "version": "0.1.8",
     "mode": "todo",
     "target": "",
-    "start": 11.0,
-    "duration": 0.05,
-    "rmeta_time": 0.03,
-    "unlocked_units": [],
+    "start": 10.49,
+    "duration": 5.38,
+    "rmeta_time": 0.78,
+    "unlocked_units": [
+      28,
+      27,
+      26
+    ],
     "unlocked_rmeta_units": []
   },
   {
     "i": 25,
-    "name": "divan-macros",
-    "version": "0.1.8",
+    "name": "hyped",
+    "version": "0.1.0",
     "mode": "todo",
     "target": "",
-    "start": 11.04,
-    "duration": 0.54,
-    "rmeta_time": null,
+    "start": 14.64,
+    "duration": 0.59,
+    "rmeta_time": 0.31,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 26,
-    "name": "ryu",
-    "version": "1.0.19",
-    "mode": "todo",
-    "target": "",
-    "start": 11.59,
-    "duration": 0.28,
-    "rmeta_time": 0.1,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 27,
-    "name": "condtype",
-    "version": "1.3.0",
-    "mode": "todo",
-    "target": "",
-    "start": 11.87,
-    "duration": 0.04,
-    "rmeta_time": 0.03,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 28,
-    "name": "regex-lite",
-    "version": "0.1.5",
-    "mode": "todo",
-    "target": "",
-    "start": 11.91,
-    "duration": 3.14,
-    "rmeta_time": 0.6,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 29,
-    "name": "itoa",
-    "version": "1.0.10",
-    "mode": "todo",
-    "target": "",
-    "start": 15.04,
-    "duration": 0.1,
-    "rmeta_time": 0.08,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      34
-    ]
-  },
-  {
-    "i": 30,
-    "name": "cfg-if",
-    "version": "1.0.0",
-    "mode": "todo",
-    "target": "",
-    "start": 15.15,
-    "duration": 0.03,
-    "rmeta_time": 0.02,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      33
-    ]
-  },
-  {
-    "i": 31,
-    "name": "seq-macro",
-    "version": "0.3.5",
-    "mode": "todo",
-    "target": "",
-    "start": 15.18,
-    "duration": 0.3,
-    "rmeta_time": null,
-    "unlocked_units": [
-      32
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 32,
-    "name": "hyped",
-    "version": "0.1.0",
-    "mode": "todo",
-    "target": "",
-    "start": 15.48,
-    "duration": 0.61,
-    "rmeta_time": 0.33,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 33,
-    "name": "divan",
-    "version": "0.1.8",
-    "mode": "todo",
-    "target": "",
-    "start": 15.68,
-    "duration": 4.71,
-    "rmeta_time": 0.89,
-    "unlocked_units": [
-      36,
-      38,
-      37
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 34,
-    "name": "serde_json",
-    "version": "1.0.111",
-    "mode": "todo",
-    "target": "",
-    "start": 16.09,
-    "duration": 3.05,
-    "rmeta_time": 0.9,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 35,
-    "name": "lazy_static",
-    "version": "1.4.0",
-    "mode": "todo",
-    "target": "",
-    "start": 19.14,
-    "duration": 0.05,
-    "rmeta_time": 0.03,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 36,
-    "name": "ssr_template_benchmarks",
-    "version": "0.1.0",
-    "mode": "todo",
-    "target": " bench \"hyped\" (test)",
-    "start": 20.38,
-    "duration": 1.08,
-    "rmeta_time": null,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 37,
     "name": "ssr_template_benchmarks",
     "version": "0.1.0",
     "mode": "todo",
     "target": " bin \"ssr_template_benchmarks\"",
-    "start": 20.38,
+    "start": 15.88,
     "duration": 0.08,
     "rmeta_time": null,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 38,
+    "i": 27,
+    "name": "ssr_template_benchmarks",
+    "version": "0.1.0",
+    "mode": "todo",
+    "target": " bench \"hyped\" (test)",
+    "start": 15.88,
+    "duration": 1.0,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 28,
     "name": "ssr_template_benchmarks",
     "version": "0.1.0",
     "mode": "todo",
     "target": " bin \"ssr_template_benchmarks\" (test)",
-    "start": 20.46,
+    "start": 15.95,
     "duration": 0.09,
     "rmeta_time": null,
     "unlocked_units": [],
@@ -1061,979 +852,739 @@ const UNIT_DATA = [
 ];
 const CONCURRENCY_DATA = [
   {
-    "t": 0.074488263,
-    "active": 2,
-    "waiting": 15,
-    "inactive": 22
-  },
-  {
-    "t": 0.074597127,
-    "active": 2,
-    "waiting": 15,
-    "inactive": 22
-  },
-  {
-    "t": 0.122148237,
-    "active": 2,
-    "waiting": 15,
-    "inactive": 22
-  },
-  {
-    "t": 0.142451829,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 22
-  },
-  {
-    "t": 0.142671583,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 22
-  },
-  {
-    "t": 0.232525622,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 21
-  },
-  {
-    "t": 0.232676276,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 21
-  },
-  {
-    "t": 0.279444319,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 20
-  },
-  {
-    "t": 0.280352889,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 20
-  },
-  {
-    "t": 0.347658363,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 19
-  },
-  {
-    "t": 0.347882409,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 19
-  },
-  {
-    "t": 0.381343581,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 19
-  },
-  {
-    "t": 0.381553543,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 19
-  },
-  {
-    "t": 0.661189853,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 18
-  },
-  {
-    "t": 0.720127412,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 18
-  },
-  {
-    "t": 0.750214608,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 18
-  },
-  {
-    "t": 0.750289233,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 18
-  },
-  {
-    "t": 0.907072303,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 17
-  },
-  {
-    "t": 0.942124466,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 17
-  },
-  {
-    "t": 0.947941215,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 17
-  },
-  {
-    "t": 0.982750171,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 17
-  },
-  {
-    "t": 0.982827935,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 17
-  },
-  {
-    "t": 1.089818507,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 16
-  },
-  {
-    "t": 1.302885588,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 16
-  },
-  {
-    "t": 1.303034734,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 16
-  },
-  {
-    "t": 1.803118817,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 16
-  },
-  {
-    "t": 1.8860933119999999,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 15
-  },
-  {
-    "t": 2.386182226,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 15
-  },
-  {
-    "t": 2.469489788,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 15
-  },
-  {
-    "t": 2.469636556,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 15
-  },
-  {
-    "t": 2.512215193,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 15
-  },
-  {
-    "t": 2.551376448,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 15
-  },
-  {
-    "t": 2.5516016070000003,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 15
-  },
-  {
-    "t": 2.729186009,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 14
-  },
-  {
-    "t": 2.729404971,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 14
-  },
-  {
-    "t": 2.832142308,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 14
-  },
-  {
-    "t": 2.895242152,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 14
-  },
-  {
-    "t": 3.027573589,
+    "t": 0.074779942,
     "active": 2,
     "waiting": 10,
-    "inactive": 14
+    "inactive": 17
   },
   {
-    "t": 3.027791814,
+    "t": 0.074881778,
     "active": 2,
     "waiting": 10,
+    "inactive": 17
+  },
+  {
+    "t": 0.074888398,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 17
+  },
+  {
+    "t": 0.219329956,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 16
+  },
+  {
+    "t": 0.219456034,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 16
+  },
+  {
+    "t": 0.26216291,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 15
+  },
+  {
+    "t": 0.262452344,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 15
+  },
+  {
+    "t": 0.262565892,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 15
+  },
+  {
+    "t": 0.303415895,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 15
+  },
+  {
+    "t": 0.303506261,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 15
+  },
+  {
+    "t": 0.314008811,
+    "active": 2,
+    "waiting": 9,
     "inactive": 14
   },
   {
-    "t": 3.155447947,
+    "t": 0.326298309,
     "active": 2,
-    "waiting": 11,
+    "waiting": 8,
+    "inactive": 14
+  },
+  {
+    "t": 0.326512136,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 14
+  },
+  {
+    "t": 0.423374271,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 14
+  },
+  {
+    "t": 0.663076118,
+    "active": 2,
+    "waiting": 7,
+    "inactive": 14
+  },
+  {
+    "t": 0.663288965,
+    "active": 2,
+    "waiting": 7,
+    "inactive": 14
+  },
+  {
+    "t": 0.708135512,
+    "active": 2,
+    "waiting": 8,
     "inactive": 13
   },
   {
-    "t": 3.22525072,
+    "t": 0.73397371,
     "active": 2,
-    "waiting": 10,
+    "waiting": 7,
     "inactive": 13
   },
   {
-    "t": 3.225466337,
+    "t": 0.734093484,
     "active": 2,
-    "waiting": 10,
+    "waiting": 7,
     "inactive": 13
   },
   {
-    "t": 3.351556378,
+    "t": 1.025902773,
     "active": 2,
-    "waiting": 10,
+    "waiting": 8,
     "inactive": 12
   },
   {
-    "t": 3.351857583,
+    "t": 1.221513697,
     "active": 2,
-    "waiting": 10,
+    "waiting": 7,
     "inactive": 12
   },
   {
-    "t": 3.379350144,
+    "t": 1.221679796,
+    "active": 2,
+    "waiting": 7,
+    "inactive": 12
+  },
+  {
+    "t": 1.386823358,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 11
+  },
+  {
+    "t": 1.389448141,
     "active": 2,
     "waiting": 9,
-    "inactive": 12
-  },
-  {
-    "t": 3.379519683,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 12
-  },
-  {
-    "t": 3.8796100239999998,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 12
-  },
-  {
-    "t": 4.339479132,
-    "active": 2,
-    "waiting": 10,
     "inactive": 10
   },
   {
-    "t": 4.34167534,
+    "t": 1.4771558,
     "active": 2,
-    "waiting": 10,
+    "waiting": 8,
     "inactive": 10
   },
   {
-    "t": 4.841765984,
+    "t": 1.477319498,
     "active": 2,
-    "waiting": 10,
+    "waiting": 8,
     "inactive": 10
   },
   {
-    "t": 5.341956714,
+    "t": 1.524093709,
     "active": 2,
-    "waiting": 10,
+    "waiting": 8,
     "inactive": 10
   },
   {
-    "t": 5.526049916,
+    "t": 1.567204601,
     "active": 2,
-    "waiting": 11,
+    "waiting": 7,
+    "inactive": 10
+  },
+  {
+    "t": 1.5673682169999998,
+    "active": 2,
+    "waiting": 7,
+    "inactive": 10
+  },
+  {
+    "t": 1.755853093,
+    "active": 2,
+    "waiting": 7,
     "inactive": 9
   },
   {
-    "t": 6.026183547,
+    "t": 1.756164931,
     "active": 2,
-    "waiting": 11,
+    "waiting": 7,
     "inactive": 9
   },
   {
-    "t": 6.526327376,
+    "t": 1.866335605,
     "active": 2,
-    "waiting": 11,
+    "waiting": 7,
     "inactive": 9
   },
   {
-    "t": 7.026474687,
+    "t": 1.910475473,
     "active": 2,
-    "waiting": 11,
+    "waiting": 6,
     "inactive": 9
   },
   {
-    "t": 7.377574356,
+    "t": 1.910629653,
     "active": 2,
-    "waiting": 11,
+    "waiting": 6,
+    "inactive": 9
+  },
+  {
+    "t": 2.052771794,
+    "active": 2,
+    "waiting": 7,
     "inactive": 8
   },
   {
-    "t": 7.377912815,
+    "t": 2.074825927,
     "active": 2,
-    "waiting": 11,
+    "waiting": 6,
     "inactive": 8
   },
   {
-    "t": 7.396942643,
+    "t": 2.075070115,
     "active": 2,
-    "waiting": 11,
+    "waiting": 6,
+    "inactive": 8
+  },
+  {
+    "t": 2.135586183,
+    "active": 2,
+    "waiting": 5,
+    "inactive": 8
+  },
+  {
+    "t": 2.135702886,
+    "active": 2,
+    "waiting": 5,
+    "inactive": 8
+  },
+  {
+    "t": 2.154726255,
+    "active": 2,
+    "waiting": 5,
     "inactive": 7
   },
   {
-    "t": 7.397083713,
+    "t": 2.155271091,
     "active": 2,
-    "waiting": 11,
+    "waiting": 5,
     "inactive": 7
   },
   {
-    "t": 7.484623406,
+    "t": 2.6553538679999997,
     "active": 2,
-    "waiting": 11,
-    "inactive": 6
+    "waiting": 5,
+    "inactive": 7
   },
   {
-    "t": 7.484934064,
+    "t": 3.155522502,
     "active": 2,
-    "waiting": 11,
-    "inactive": 6
+    "waiting": 5,
+    "inactive": 7
   },
   {
-    "t": 7.487756177,
+    "t": 3.657465448,
     "active": 2,
-    "waiting": 10,
-    "inactive": 6
+    "waiting": 5,
+    "inactive": 7
   },
   {
-    "t": 7.48798353,
+    "t": 4.1576275129999996,
     "active": 2,
-    "waiting": 10,
-    "inactive": 6
+    "waiting": 5,
+    "inactive": 7
   },
   {
-    "t": 7.943287668,
+    "t": 4.337529852,
     "active": 2,
-    "waiting": 10,
-    "inactive": 6
+    "waiting": 5,
+    "inactive": 7
   },
   {
-    "t": 7.969695064,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 6
-  },
-  {
-    "t": 7.9699317579999995,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 6
-  },
-  {
-    "t": 8.470015985,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 6
-  },
-  {
-    "t": 8.970187832,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 6
-  },
-  {
-    "t": 9.470335146,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 6
-  },
-  {
-    "t": 9.970482454,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 6
-  },
-  {
-    "t": 10.470627075,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 6
-  },
-  {
-    "t": 10.845397671,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 6
-  },
-  {
-    "t": 10.998040899,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 6
-  },
-  {
-    "t": 10.998498957,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 6
-  },
-  {
-    "t": 11.026414151,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 6
-  },
-  {
-    "t": 11.043854742,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 6
-  },
-  {
-    "t": 11.043987413,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 6
-  },
-  {
-    "t": 11.544070072,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 6
-  },
-  {
-    "t": 11.586976225,
+    "t": 4.410034888,
     "active": 2,
     "waiting": 6,
     "inactive": 6
   },
   {
-    "t": 11.58754605,
+    "t": 4.910121492,
     "active": 2,
     "waiting": 6,
     "inactive": 6
   },
   {
-    "t": 11.683987511,
+    "t": 5.41027665,
     "active": 2,
     "waiting": 6,
     "inactive": 6
   },
   {
-    "t": 11.866504916,
+    "t": 5.745516607,
+    "active": 2,
+    "waiting": 6,
+    "inactive": 5
+  },
+  {
+    "t": 5.745743766,
+    "active": 2,
+    "waiting": 6,
+    "inactive": 5
+  },
+  {
+    "t": 6.245833141,
+    "active": 2,
+    "waiting": 6,
+    "inactive": 5
+  },
+  {
+    "t": 6.269176022,
     "active": 2,
     "waiting": 5,
-    "inactive": 6
+    "inactive": 5
   },
   {
-    "t": 11.866741436,
+    "t": 6.26935068,
     "active": 2,
     "waiting": 5,
-    "inactive": 6
+    "inactive": 5
   },
   {
-    "t": 11.895966651,
+    "t": 6.292235039,
     "active": 2,
     "waiting": 5,
-    "inactive": 6
+    "inactive": 5
   },
   {
-    "t": 11.906617722,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 11.906698736,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 12.406777644,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 12.502202151,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 13.002292626,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 13.50243494,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 14.002588991,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 14.502738295,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 15.002885595,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 6
-  },
-  {
-    "t": 15.044194169,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 6
-  },
-  {
-    "t": 15.04431992,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 6
-  },
-  {
-    "t": 15.122509642,
+    "t": 6.309929617,
     "active": 2,
     "waiting": 4,
     "inactive": 5
   },
   {
-    "t": 15.148694298,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 5
-  },
-  {
-    "t": 15.148899821,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 5
-  },
-  {
-    "t": 15.168516854,
+    "t": 6.31017532,
     "active": 2,
     "waiting": 4,
+    "inactive": 5
+  },
+  {
+    "t": 6.810262285,
+    "active": 2,
+    "waiting": 4,
+    "inactive": 5
+  },
+  {
+    "t": 6.814097929,
+    "active": 2,
+    "waiting": 4,
+    "inactive": 5
+  },
+  {
+    "t": 6.850839833,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 6.850992884,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 7.351072382,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 7.432041995,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 7.9328305839999995,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 8.432972626,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 8.933138558,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 9.433303945,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 9.933463653,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 10.086382022,
+    "active": 2,
+    "waiting": 2,
+    "inactive": 5
+  },
+  {
+    "t": 10.090352896,
+    "active": 2,
+    "waiting": 2,
+    "inactive": 5
+  },
+  {
+    "t": 10.134278201,
+    "active": 2,
+    "waiting": 2,
+    "inactive": 5
+  },
+  {
+    "t": 10.149684002,
+    "active": 2,
+    "waiting": 1,
+    "inactive": 5
+  },
+  {
+    "t": 10.149792035,
+    "active": 2,
+    "waiting": 1,
+    "inactive": 5
+  },
+  {
+    "t": 10.461194686,
+    "active": 2,
+    "waiting": 1,
     "inactive": 4
   },
   {
-    "t": 15.178131202,
+    "t": 10.461483243,
     "active": 2,
-    "waiting": 3,
+    "waiting": 1,
     "inactive": 4
   },
   {
-    "t": 15.17820141,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 4
-  },
-  {
-    "t": 15.482674727,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 3
-  },
-  {
-    "t": 15.482959339,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 3
-  },
-  {
-    "t": 15.676340120999999,
+    "t": 10.482513581,
     "active": 2,
     "waiting": 2,
     "inactive": 3
   },
   {
-    "t": 15.676524742,
-    "active": 2,
-    "waiting": 2,
-    "inactive": 3
-  },
-  {
-    "t": 15.808985021,
-    "active": 2,
-    "waiting": 2,
-    "inactive": 3
-  },
-  {
-    "t": 16.091646787,
+    "t": 10.492567052,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 16.092059525,
+    "t": 10.492754815,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 16.563907332,
+    "t": 10.992841918,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 16.989991484,
+    "t": 11.268907947,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 17.49013311,
+    "t": 11.769055101,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 17.990278323,
+    "t": 12.269218041,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 18.490425297,
+    "t": 12.769386389,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 18.990567187,
+    "t": 13.269555352,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 19.13924221,
+    "t": 13.769716805,
+    "active": 2,
+    "waiting": 1,
+    "inactive": 3
+  },
+  {
+    "t": 14.269881726,
+    "active": 2,
+    "waiting": 1,
+    "inactive": 3
+  },
+  {
+    "t": 14.636210614,
     "active": 2,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 19.139507492,
+    "t": 14.63636674,
     "active": 2,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 19.170231766,
+    "t": 14.950242332,
     "active": 2,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 19.185783315,
+    "t": 15.222995503,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 19.187837119,
+    "t": 15.223497918,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 19.687918408,
+    "t": 15.723584704,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.188133971,
+    "t": 15.810059429,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.31704306,
+    "t": 15.810100231,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317138521,
+    "t": 15.8101207,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317163447,
+    "t": 15.810145317,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317182339,
+    "t": 15.810163865,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317201059,
+    "t": 15.810181459,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317219281,
+    "t": 15.810199022,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317237849,
+    "t": 15.810216649000001,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317256495,
+    "t": 15.810234135,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317286383,
+    "t": 15.810251794,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317304701,
+    "t": 15.810269864,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317322544,
+    "t": 15.810288028,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317341167,
+    "t": 15.810306537,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.31735936,
+    "t": 15.81032851,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317389251,
+    "t": 15.810346659,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317414347,
+    "t": 15.810364944,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317435622,
+    "t": 15.81038303,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317457783,
+    "t": 15.810401466,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317479608,
+    "t": 15.810419715,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317502148,
+    "t": 15.810438127,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317520892,
+    "t": 15.810456201000001,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317542494,
+    "t": 15.810474545,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317560712,
+    "t": 15.810493044,
     "active": 1,
     "waiting": 0,
     "inactive": 3
   },
   {
-    "t": 20.317577736,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317608053,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317631538,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317654692,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317677152,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317695259,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317721482,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317745598,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.31776459,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317785505,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.317796986,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.382989579,
+    "t": 15.877521951,
     "active": 2,
     "waiting": 1,
     "inactive": 0
   },
   {
-    "t": 20.383057671,
+    "t": 15.877681682,
     "active": 2,
     "waiting": 1,
     "inactive": 0
   },
   {
-    "t": 20.383076912,
-    "active": 2,
-    "waiting": 1,
-    "inactive": 0
-  },
-  {
-    "t": 20.462027646,
+    "t": 15.953686967,
     "active": 2,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.462198224,
+    "t": 15.953806829,
     "active": 2,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.554674672,
+    "t": 16.048357244,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.554735595,
+    "t": 16.048478047,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 21.054814888,
+    "t": 16.548554865,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 21.462404493,
+    "t": 16.873840424,
     "active": 0,
     "waiting": 0,
     "inactive": 0
@@ -2041,236 +1592,180 @@ const CONCURRENCY_DATA = [
 ];
 const CPU_USAGE = [
   [
-    0.232527208,
+    0.219330981,
+    96.7741935483871
+  ],
+  [
+    0.326298768,
     100.0
   ],
   [
-    0.347658595,
+    0.663076366,
     100.0
   ],
   [
-    0.661190974,
+    1.02590508,
     100.0
   ],
   [
-    0.907073375,
+    1.221513995,
     100.0
   ],
   [
-    1.089819541,
+    1.386825322,
     100.0
   ],
   [
-    1.302885965,
+    1.524095733,
     100.0
   ],
   [
-    1.803121262,
+    1.755854359,
     100.0
   ],
   [
-    2.386182765,
+    1.8663378339999999,
     100.0
   ],
   [
-    2.512217048,
+    2.052773887,
     100.0
   ],
   [
-    2.7291864,
+    2.154726657,
     100.0
   ],
   [
-    2.832144188,
+    2.655356223,
     100.0
   ],
   [
-    3.027574042,
+    3.155523238,
     100.0
   ],
   [
-    3.155449183,
+    3.6574658700000002,
     100.0
   ],
   [
-    3.351556732,
+    4.157627967,
     100.0
   ],
   [
-    3.879612179,
+    4.337531081,
     100.0
   ],
   [
-    4.339479543,
+    4.910121908,
     100.0
   ],
   [
-    4.841768076,
+    5.410277057,
     100.0
   ],
   [
-    5.341957001,
+    5.745516882,
     100.0
   ],
   [
-    5.526050165,
+    6.245835373,
     100.0
   ],
   [
-    6.026184129,
+    6.810264613,
     100.0
   ],
   [
-    6.526327815,
+    7.351075047,
     100.0
   ],
   [
-    7.026475139,
+    7.932831033,
     100.0
   ],
   [
-    7.377574724,
+    8.432986539,
     100.0
   ],
   [
-    7.484623715,
+    8.933139166,
     100.0
   ],
   [
-    7.943289691,
+    9.433304394,
     100.0
   ],
   [
-    8.470018088,
+    9.933464094,
     100.0
   ],
   [
-    8.970188113,
+    10.086382336,
     100.0
   ],
   [
-    9.470335461,
+    10.461195803,
     100.0
   ],
   [
-    9.970482714,
+    10.992844035,
     100.0
   ],
   [
-    10.470627374,
+    11.268908245,
     100.0
   ],
   [
-    10.845397957,
+    11.769055547,
     100.0
   ],
   [
-    10.998041395,
+    12.269218463,
     100.0
   ],
   [
-    11.54407223,
+    12.769386865,
     100.0
   ],
   [
-    11.683989421,
+    13.269555814,
     100.0
   ],
   [
-    11.866505316,
+    13.769717218,
     100.0
   ],
   [
-    12.406779965,
+    14.269882206,
     100.0
   ],
   [
-    13.002292987,
+    14.63621084,
     100.0
   ],
   [
-    13.502435319,
+    14.950244407,
     100.0
   ],
   [
-    14.002589517,
+    15.22299579,
     100.0
   ],
   [
-    14.502738648,
+    15.723585373,
     100.0
   ],
   [
-    15.002886032,
+    15.877522268,
+    80.0
+  ],
+  [
+    16.048358285,
     100.0
   ],
   [
-    15.122511275,
-    100.0
-  ],
-  [
-    15.482676083,
-    100.0
-  ],
-  [
-    15.676340413,
-    100.0
-  ],
-  [
-    15.808987355,
-    100.0
-  ],
-  [
-    16.091647172,
-    100.0
-  ],
-  [
-    16.563909409,
-    100.0
-  ],
-  [
-    16.989992286,
-    100.0
-  ],
-  [
-    17.490133383,
-    100.0
-  ],
-  [
-    17.99027866,
-    100.0
-  ],
-  [
-    18.49042566,
-    100.0
-  ],
-  [
-    18.990567554,
-    100.0
-  ],
-  [
-    19.139242516,
-    100.0
-  ],
-  [
-    19.687919058,
-    100.0
-  ],
-  [
-    20.188134354,
-    100.0
-  ],
-  [
-    20.317043466,
-    100.0
-  ],
-  [
-    20.462028693,
-    76.66666666666667
-  ],
-  [
-    21.054815228,
-    99.15966386554622
+    16.54855554,
+    97.97979797979798
   ]
 ];
 // Position of the vertical axis.

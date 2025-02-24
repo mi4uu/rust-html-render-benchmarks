@@ -169,7 +169,7 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 
 <table class="my-table summary-table">
   <tr>
-    <td>Targets:</td><td>ssr_template_benchmarks 0.1.0 (bin "ssr_template_benchmarks", bench "tinytemplate")</td>
+    <td>Targets:</td><td>ssr_template_benchmarks 0.1.0 (bin "ssr_template_benchmarks", bench "hypertext")</td>
   </tr>
   <tr>
     <td>Profile:</td><td>bench</td>
@@ -178,19 +178,19 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
     <td>Fresh units:</td><td>0</td>
   </tr>
   <tr>
-    <td>Dirty units:</td><td>38</td>
+    <td>Dirty units:</td><td>51</td>
   </tr>
   <tr>
-    <td>Total units:</td><td>38</td>
+    <td>Total units:</td><td>51</td>
   </tr>
   <tr>
     <td>Max concurrency:</td><td>2 (jobs=2 ncpu=2)</td>
   </tr>
   <tr>
-    <td>Build start:</td><td>2025-02-24T05:07:50Z</td>
+    <td>Build start:</td><td>2025-02-24T05:18:46Z</td>
   </tr>
   <tr>
-    <td>Total time:</td><td>22.0s</td>
+    <td>Total time:</td><td>19.9s</td>
   </tr>
   <tr>
     <td>rustc:</td><td>rustc 1.87.0-nightly (f8a913b13 2025-02-23)<br>Host: x86_64-unknown-linux-gnu<br>Target: x86_64-unknown-linux-gnu</td>
@@ -236,97 +236,97 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 <tr>
   <td>1.</td>
   <td>clap_builder v4.4.12</td>
-  <td>12.3s</td>
-  <td>10.1s (82%)</td>
+  <td>12.6s</td>
+  <td>10.3s (82%)</td>
   <td>env, help, std, wrap_help</td>
 </tr>
 
 <tr>
   <td>2.</td>
-  <td>divan v0.1.8</td>
-  <td>4.8s</td>
-  <td>4.0s (84%)</td>
-  <td>default, help, wrap_help</td>
+  <td>syn v2.0.48</td>
+  <td>4.7s</td>
+  <td>1.8s (37%)</td>
+  <td>clone-impls, default, derive, extra-traits, full, parsing, printing, proc-macro, quote</td>
 </tr>
 
 <tr>
   <td>3.</td>
-  <td>syn v2.0.48</td>
-  <td>3.6s</td>
-  <td>1.5s (43%)</td>
-  <td>clone-impls, default, derive, full, parsing, printing, proc-macro, quote</td>
+  <td>divan v0.1.8</td>
+  <td>4.2s</td>
+  <td>3.3s (80%)</td>
+  <td>default, help, wrap_help</td>
 </tr>
 
 <tr>
   <td>4.</td>
   <td>regex-lite v0.1.5</td>
-  <td>3.1s</td>
-  <td>2.5s (81%)</td>
+  <td>3.2s</td>
+  <td>2.6s (81%)</td>
   <td>std, string</td>
 </tr>
 
 <tr>
   <td>5.</td>
-  <td>serde_json v1.0.111</td>
-  <td>3.0s</td>
-  <td>2.1s (71%)</td>
-  <td>default, std</td>
-</tr>
-
-<tr>
-  <td>6.</td>
-  <td>serde_derive v1.0.195</td>
-  <td>2.9s</td>
-  <td></td>
-  <td>default</td>
-</tr>
-
-<tr>
-  <td>7.</td>
-  <td>serde v1.0.195</td>
-  <td>2.8s</td>
-  <td>0.1s (5%)</td>
-  <td>default, derive, serde_derive, std</td>
-</tr>
-
-<tr>
-  <td>8.</td>
-  <td>tinytemplate v1.2.1</td>
-  <td>1.5s</td>
-  <td>1.3s (84%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>9.</td>
-  <td>ssr_template_benchmarks v0.1.0 bench "tinytemplate" (test)</td>
-  <td>1.4s</td>
-  <td></td>
-  <td>default, tinytemplate</td>
-</tr>
-
-<tr>
-  <td>10.</td>
   <td>rustix v0.38.28</td>
-  <td>1.2s</td>
+  <td>1.3s</td>
   <td>0.6s (48%)</td>
   <td>alloc, default, std, termios, use-libc-auxv</td>
 </tr>
 
 <tr>
-  <td>11.</td>
-  <td>libc v0.2.151</td>
+  <td>6.</td>
+  <td>thiserror-impl v1.0.56</td>
+  <td>1.0s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>7.</td>
+  <td>ssr_template_benchmarks v0.1.0 bench "hypertext" (test)</td>
+  <td>1.0s</td>
+  <td></td>
+  <td>default, hypertext</td>
+</tr>
+
+<tr>
+  <td>8.</td>
+  <td>hypertext-macros v0.3.0</td>
+  <td>0.9s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>9.</td>
+  <td>rstml v0.11.2</td>
+  <td>0.7s</td>
+  <td>0.3s (43%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>10.</td>
+  <td>html-escape v0.2.13</td>
   <td>0.6s</td>
-  <td>0.1s (10%)</td>
-  <td>default, std</td>
+  <td>0.1s (15%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>11.</td>
+  <td>proc-macro2 v1.0.75</td>
+  <td>0.5s</td>
+  <td>0.2s (40%)</td>
+  <td>default, proc-macro</td>
 </tr>
 
 <tr>
   <td>12.</td>
-  <td>proc-macro2 v1.0.75</td>
-  <td>0.6s</td>
-  <td>0.2s (35%)</td>
-  <td>default, proc-macro</td>
+  <td>libc v0.2.151</td>
+  <td>0.5s</td>
+  <td>0.0s (6%)</td>
+  <td>default, std</td>
 </tr>
 
 <tr>
@@ -339,54 +339,78 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 
 <tr>
   <td>14.</td>
-  <td>linux-raw-sys v0.4.12</td>
-  <td>0.4s</td>
-  <td>0.0s (7%)</td>
-  <td>elf, errno, general, ioctl, no_std</td>
+  <td>html-escape v0.2.13</td>
+  <td>0.5s</td>
+  <td>0.0s (9%)</td>
+  <td></td>
 </tr>
 
 <tr>
   <td>15.</td>
-  <td>clap_lex v0.6.0</td>
+  <td>syn_derive v0.1.8</td>
   <td>0.4s</td>
-  <td>0.2s (63%)</td>
   <td></td>
+  <td>default, full</td>
 </tr>
 
 <tr>
   <td>16.</td>
-  <td>bitflags v2.4.1</td>
-  <td>0.3s</td>
-  <td>0.2s (66%)</td>
-  <td>std</td>
+  <td>linux-raw-sys v0.4.12</td>
+  <td>0.4s</td>
+  <td>0.0s (8%)</td>
+  <td>elf, errno, general, ioctl, no_std</td>
 </tr>
 
 <tr>
   <td>17.</td>
-  <td>ryu v1.0.19</td>
+  <td>bitflags v2.4.1</td>
   <td>0.3s</td>
-  <td>0.2s (67%)</td>
-  <td></td>
+  <td>0.2s (62%)</td>
+  <td>std</td>
 </tr>
 
 <tr>
   <td>18.</td>
-  <td>quote v1.0.35</td>
-  <td>0.2s</td>
-  <td>0.1s (38%)</td>
-  <td>default, proc-macro</td>
+  <td>clap_lex v0.6.0</td>
+  <td>0.3s</td>
+  <td>0.2s (65%)</td>
+  <td></td>
 </tr>
 
 <tr>
   <td>19.</td>
-  <td>anstyle v1.0.4</td>
-  <td>0.2s</td>
-  <td>0.1s (37%)</td>
-  <td>default, std</td>
+  <td>ryu v1.0.19</td>
+  <td>0.3s</td>
+  <td>0.2s (66%)</td>
+  <td></td>
 </tr>
 
 <tr>
   <td>20.</td>
+  <td>proc-macro-error-attr v1.0.4</td>
+  <td>0.2s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>21.</td>
+  <td>quote v1.0.35</td>
+  <td>0.2s</td>
+  <td>0.1s (34%)</td>
+  <td>default, proc-macro</td>
+</tr>
+
+<tr>
+  <td>22.</td>
+  <td>version_check v0.9.4</td>
+  <td>0.2s</td>
+  <td>0.1s (49%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>23.</td>
   <td>rustix v0.38.28 build script</td>
   <td>0.2s</td>
   <td></td>
@@ -394,7 +418,31 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>21.</td>
+  <td>24.</td>
+  <td>proc-macro-error v1.0.4</td>
+  <td>0.2s</td>
+  <td>0.1s (37%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>25.</td>
+  <td>anstyle v1.0.4</td>
+  <td>0.2s</td>
+  <td>0.1s (35%)</td>
+  <td>default, std</td>
+</tr>
+
+<tr>
+  <td>26.</td>
+  <td>proc-macro2-diagnostics v0.10.1</td>
+  <td>0.2s</td>
+  <td>0.1s (41%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>27.</td>
   <td>libc v0.2.151 build script</td>
   <td>0.2s</td>
   <td></td>
@@ -402,111 +450,167 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>22.</td>
-  <td>itoa v1.0.10</td>
+  <td>28.</td>
+  <td>hypertext v0.3.0</td>
   <td>0.2s</td>
   <td>0.0s (11%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>23.</td>
-  <td>proc-macro2 v1.0.75 build script</td>
-  <td>0.2s</td>
-  <td></td>
-  <td>default, proc-macro</td>
-</tr>
-
-<tr>
-  <td>24.</td>
-  <td>serde v1.0.195 build script</td>
-  <td>0.1s</td>
-  <td></td>
-  <td>default, derive, serde_derive, std</td>
-</tr>
-
-<tr>
-  <td>25.</td>
-  <td>terminal_size v0.3.0</td>
-  <td>0.1s</td>
-  <td>0.0s (34%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>26.</td>
-  <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks"</td>
-  <td>0.1s</td>
-  <td></td>
-  <td>default, tinytemplate</td>
-</tr>
-
-<tr>
-  <td>27.</td>
-  <td>serde_json v1.0.111 build script</td>
-  <td>0.1s</td>
-  <td></td>
-  <td>default, std</td>
-</tr>
-
-<tr>
-  <td>28.</td>
-  <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks" (test)</td>
-  <td>0.1s</td>
-  <td></td>
-  <td>default, tinytemplate</td>
+  <td>alloc, default</td>
 </tr>
 
 <tr>
   <td>29.</td>
-  <td>cfg-if v1.0.0</td>
-  <td>0.1s</td>
-  <td>0.0s (40%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>30.</td>
-  <td>clap v4.4.13</td>
-  <td>0.1s</td>
-  <td>0.0s (54%)</td>
-  <td>env, help, std, wrap_help</td>
-</tr>
-
-<tr>
-  <td>31.</td>
-  <td>proc-macro2 v1.0.75 build script (run)</td>
+  <td>proc-macro2 v1.0.75 build script</td>
   <td>0.1s</td>
   <td></td>
   <td>default, proc-macro</td>
 </tr>
 
 <tr>
-  <td>32.</td>
-  <td>unicode-ident v1.0.12</td>
+  <td>30.</td>
+  <td>thiserror v1.0.56 build script</td>
   <td>0.1s</td>
-  <td>0.0s (22%)</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>31.</td>
+  <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks"</td>
+  <td>0.1s</td>
+  <td></td>
+  <td>default, hypertext</td>
+</tr>
+
+<tr>
+  <td>32.</td>
+  <td>terminal_size v0.3.0</td>
+  <td>0.1s</td>
+  <td>0.0s (43%)</td>
   <td></td>
 </tr>
 
 <tr>
   <td>33.</td>
-  <td>condtype v1.3.0</td>
-  <td>0.0s</td>
-  <td>0.0s (35%)</td>
+  <td>itoa v1.0.10</td>
+  <td>0.1s</td>
+  <td>0.0s (14%)</td>
   <td></td>
 </tr>
 
 <tr>
   <td>34.</td>
-  <td>lazy_static v1.4.0</td>
-  <td>0.0s</td>
-  <td>0.0s (27%)</td>
+  <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks" (test)</td>
+  <td>0.1s</td>
   <td></td>
+  <td>default, hypertext</td>
 </tr>
 
 <tr>
   <td>35.</td>
+  <td>proc-macro2-diagnostics v0.10.1 build script</td>
+  <td>0.1s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>36.</td>
+  <td>proc-macro-error v1.0.4 build script</td>
+  <td>0.1s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>37.</td>
+  <td>proc-macro-error-attr v1.0.4 build script</td>
+  <td>0.1s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>38.</td>
+  <td>condtype v1.3.0</td>
+  <td>0.1s</td>
+  <td>0.0s (29%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>39.</td>
+  <td>unicode-ident v1.0.12</td>
+  <td>0.1s</td>
+  <td>0.0s (23%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>40.</td>
+  <td>thiserror v1.0.56</td>
+  <td>0.0s</td>
+  <td>0.0s (33%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>41.</td>
+  <td>thiserror v1.0.56 build script (run)</td>
+  <td>0.0s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>42.</td>
+  <td>proc-macro2 v1.0.75 build script (run)</td>
+  <td>0.0s</td>
+  <td></td>
+  <td>default, proc-macro</td>
+</tr>
+
+<tr>
+  <td>43.</td>
+  <td>clap v4.4.13</td>
+  <td>0.0s</td>
+  <td>0.0s (44%)</td>
+  <td>env, help, std, wrap_help</td>
+</tr>
+
+<tr>
+  <td>44.</td>
+  <td>utf8-width v0.1.7</td>
+  <td>0.0s</td>
+  <td>0.0s (36%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>45.</td>
+  <td>cfg-if v1.0.0</td>
+  <td>0.0s</td>
+  <td>0.0s (43%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>46.</td>
+  <td>utf8-width v0.1.7</td>
+  <td>0.0s</td>
+  <td>0.0s (31%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>47.</td>
+  <td>proc-macro-error v1.0.4 build script (run)</td>
+  <td>0.0s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>48.</td>
   <td>rustix v0.38.28 build script (run)</td>
   <td>0.0s</td>
   <td></td>
@@ -514,7 +618,7 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>36.</td>
+  <td>49.</td>
   <td>libc v0.2.151 build script (run)</td>
   <td>0.0s</td>
   <td></td>
@@ -522,24 +626,24 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>37.</td>
-  <td>serde v1.0.195 build script (run)</td>
+  <td>50.</td>
+  <td>proc-macro-error-attr v1.0.4 build script (run)</td>
   <td>0.0s</td>
   <td></td>
-  <td>default, derive, serde_derive, std</td>
+  <td></td>
 </tr>
 
 <tr>
-  <td>38.</td>
-  <td>serde_json v1.0.111 build script (run)</td>
+  <td>51.</td>
+  <td>proc-macro2-diagnostics v0.10.1 build script (run)</td>
   <td>0.0s</td>
   <td></td>
-  <td>default, std</td>
+  <td></td>
 </tr>
 </tbody>
 </table>
 <script>
-DURATION = 22;
+DURATION = 20;
 const UNIT_DATA = [
   {
     "i": 0,
@@ -547,8 +651,8 @@ const UNIT_DATA = [
     "version": "1.0.75",
     "mode": "todo",
     "target": " build script",
-    "start": 0.07,
-    "duration": 0.16,
+    "start": 0.08,
+    "duration": 0.15,
     "rmeta_time": null,
     "unlocked_units": [
       3
@@ -561,7 +665,7 @@ const UNIT_DATA = [
     "version": "1.0.12",
     "mode": "todo",
     "target": "",
-    "start": 0.07,
+    "start": 0.08,
     "duration": 0.06,
     "rmeta_time": 0.05,
     "unlocked_units": [],
@@ -569,14 +673,16 @@ const UNIT_DATA = [
   },
   {
     "i": 2,
-    "name": "rustix",
-    "version": "0.38.28",
+    "name": "version_check",
+    "version": "0.9.4",
     "mode": "todo",
-    "target": " build script",
-    "start": 0.13,
-    "duration": 0.19,
-    "rmeta_time": null,
+    "target": "",
+    "start": 0.14,
+    "duration": 0.24,
+    "rmeta_time": 0.12,
     "unlocked_units": [
+      12,
+      7,
       5
     ],
     "unlocked_rmeta_units": []
@@ -588,7 +694,7 @@ const UNIT_DATA = [
     "mode": "run-custom-build",
     "target": " build script (run)",
     "start": 0.23,
-    "duration": 0.06,
+    "duration": 0.04,
     "rmeta_time": null,
     "unlocked_units": [
       4
@@ -601,223 +707,116 @@ const UNIT_DATA = [
     "version": "1.0.75",
     "mode": "todo",
     "target": "",
-    "start": 0.29,
-    "duration": 0.57,
-    "rmeta_time": 0.37,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      7
-    ]
-  },
-  {
-    "i": 5,
-    "name": "rustix",
-    "version": "0.38.28",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 0.32,
-    "duration": 0.04,
-    "rmeta_time": null,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 6,
-    "name": "linux-raw-sys",
-    "version": "0.4.12",
-    "mode": "todo",
-    "target": "",
-    "start": 0.36,
-    "duration": 0.43,
-    "rmeta_time": 0.4,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 7,
-    "name": "quote",
-    "version": "1.0.35",
-    "mode": "todo",
-    "target": "",
-    "start": 0.79,
-    "duration": 0.23,
-    "rmeta_time": 0.14,
+    "start": 0.27,
+    "duration": 0.54,
+    "rmeta_time": 0.32,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
       9
     ]
   },
   {
-    "i": 8,
-    "name": "bitflags",
-    "version": "2.4.1",
+    "i": 5,
+    "name": "proc-macro-error-attr",
+    "version": "1.0.4",
     "mode": "todo",
-    "target": "",
-    "start": 0.86,
-    "duration": 0.34,
-    "rmeta_time": 0.12,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      10
-    ]
-  },
-  {
-    "i": 9,
-    "name": "syn",
-    "version": "2.0.48",
-    "mode": "todo",
-    "target": "",
-    "start": 1.02,
-    "duration": 3.61,
-    "rmeta_time": 2.07,
+    "target": " build script",
+    "start": 0.38,
+    "duration": 0.08,
+    "rmeta_time": null,
     "unlocked_units": [
-      20,
-      27
+      6
     ],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 10,
+    "i": 6,
+    "name": "proc-macro-error-attr",
+    "version": "1.0.4",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 0.46,
+    "duration": 0.02,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 7,
+    "name": "proc-macro-error",
+    "version": "1.0.4",
+    "mode": "todo",
+    "target": " build script",
+    "start": 0.48,
+    "duration": 0.09,
+    "rmeta_time": null,
+    "unlocked_units": [
+      11
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 8,
     "name": "rustix",
     "version": "0.38.28",
     "mode": "todo",
+    "target": " build script",
+    "start": 0.56,
+    "duration": 0.22,
+    "rmeta_time": null,
+    "unlocked_units": [
+      10
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 9,
+    "name": "quote",
+    "version": "1.0.35",
+    "mode": "todo",
     "target": "",
-    "start": 1.2,
-    "duration": 1.17,
-    "rmeta_time": 0.61,
-    "unlocked_units": [],
+    "start": 0.79,
+    "duration": 0.24,
+    "rmeta_time": 0.16,
+    "unlocked_units": [
+      14
+    ],
     "unlocked_rmeta_units": [
       13
     ]
   },
   {
-    "i": 11,
-    "name": "serde",
-    "version": "1.0.195",
-    "mode": "todo",
-    "target": " build script",
-    "start": 2.37,
-    "duration": 0.13,
+    "i": 10,
+    "name": "rustix",
+    "version": "0.38.28",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 0.81,
+    "duration": 0.03,
     "rmeta_time": null,
-    "unlocked_units": [
-      12
-    ],
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 11,
+    "name": "proc-macro-error",
+    "version": "1.0.4",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 0.84,
+    "duration": 0.04,
+    "rmeta_time": null,
+    "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 12,
-    "name": "serde",
-    "version": "1.0.195",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 2.5,
-    "duration": 0.02,
-    "rmeta_time": null,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 13,
-    "name": "terminal_size",
-    "version": "0.3.0",
-    "mode": "todo",
-    "target": "",
-    "start": 2.52,
-    "duration": 0.1,
-    "rmeta_time": 0.06,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 14,
-    "name": "clap_lex",
-    "version": "0.6.0",
-    "mode": "todo",
-    "target": "",
-    "start": 2.62,
-    "duration": 0.35,
-    "rmeta_time": 0.13,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 15,
-    "name": "serde_json",
-    "version": "1.0.111",
+    "name": "proc-macro2-diagnostics",
+    "version": "0.10.1",
     "mode": "todo",
     "target": " build script",
-    "start": 2.97,
-    "duration": 0.08,
-    "rmeta_time": null,
-    "unlocked_units": [
-      22
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 16,
-    "name": "anstyle",
-    "version": "1.0.4",
-    "mode": "todo",
-    "target": "",
-    "start": 3.06,
-    "duration": 0.21,
-    "rmeta_time": 0.13,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      19
-    ]
-  },
-  {
-    "i": 17,
-    "name": "libc",
-    "version": "0.2.151",
-    "mode": "todo",
-    "target": " build script",
-    "start": 3.26,
-    "duration": 0.18,
-    "rmeta_time": null,
-    "unlocked_units": [
-      18
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 18,
-    "name": "libc",
-    "version": "0.2.151",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 3.44,
-    "duration": 0.02,
-    "rmeta_time": null,
-    "unlocked_units": [
-      28
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 19,
-    "name": "clap_builder",
-    "version": "4.4.12",
-    "mode": "todo",
-    "target": "",
-    "start": 3.46,
-    "duration": 12.25,
-    "rmeta_time": 2.16,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      26
-    ]
-  },
-  {
-    "i": 20,
-    "name": "serde_derive",
-    "version": "1.0.195",
-    "mode": "todo",
-    "target": "",
-    "start": 4.63,
-    "duration": 2.86,
+    "start": 0.88,
+    "duration": 0.09,
     "rmeta_time": null,
     "unlocked_units": [
       21
@@ -825,124 +824,240 @@ const UNIT_DATA = [
     "unlocked_rmeta_units": []
   },
   {
-    "i": 21,
-    "name": "serde",
-    "version": "1.0.195",
+    "i": 13,
+    "name": "syn",
+    "version": "2.0.48",
     "mode": "todo",
     "target": "",
-    "start": 7.49,
-    "duration": 2.84,
-    "rmeta_time": 2.7,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 22,
-    "name": "serde_json",
-    "version": "1.0.111",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 10.33,
-    "duration": 0.0,
-    "rmeta_time": null,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 23,
-    "name": "ryu",
-    "version": "1.0.19",
-    "mode": "todo",
-    "target": "",
-    "start": 10.33,
-    "duration": 0.28,
-    "rmeta_time": 0.09,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 24,
-    "name": "itoa",
-    "version": "1.0.10",
-    "mode": "todo",
-    "target": "",
-    "start": 10.61,
-    "duration": 0.17,
-    "rmeta_time": 0.15,
-    "unlocked_units": [],
+    "start": 0.97,
+    "duration": 4.71,
+    "rmeta_time": 2.96,
+    "unlocked_units": [
+      31,
+      29,
+      40
+    ],
     "unlocked_rmeta_units": [
       25
     ]
   },
   {
-    "i": 25,
-    "name": "serde_json",
-    "version": "1.0.111",
+    "i": 14,
+    "name": "proc-macro-error-attr",
+    "version": "1.0.4",
     "mode": "todo",
     "target": "",
-    "start": 10.78,
-    "duration": 2.96,
-    "rmeta_time": 0.85,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      33
-    ]
+    "start": 1.03,
+    "duration": 0.25,
+    "rmeta_time": null,
+    "unlocked_units": [
+      20
+    ],
+    "unlocked_rmeta_units": []
   },
   {
-    "i": 26,
-    "name": "clap",
-    "version": "4.4.13",
+    "i": 15,
+    "name": "bitflags",
+    "version": "2.4.1",
     "mode": "todo",
     "target": "",
-    "start": 13.73,
-    "duration": 0.07,
-    "rmeta_time": 0.03,
+    "start": 1.28,
+    "duration": 0.35,
+    "rmeta_time": 0.13,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 27,
-    "name": "divan-macros",
-    "version": "0.1.8",
+    "i": 16,
+    "name": "thiserror",
+    "version": "1.0.56",
+    "mode": "todo",
+    "target": " build script",
+    "start": 1.63,
+    "duration": 0.14,
+    "rmeta_time": null,
+    "unlocked_units": [
+      19
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 17,
+    "name": "linux-raw-sys",
+    "version": "0.4.12",
     "mode": "todo",
     "target": "",
-    "start": 13.8,
-    "duration": 0.52,
+    "start": 1.77,
+    "duration": 0.37,
+    "rmeta_time": 0.34,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      18
+    ]
+  },
+  {
+    "i": 18,
+    "name": "rustix",
+    "version": "0.38.28",
+    "mode": "todo",
+    "target": "",
+    "start": 2.14,
+    "duration": 1.29,
+    "rmeta_time": 0.67,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      22
+    ]
+  },
+  {
+    "i": 19,
+    "name": "thiserror",
+    "version": "1.0.56",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 3.44,
+    "duration": 0.05,
     "rmeta_time": null,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 28,
-    "name": "libc",
-    "version": "0.2.151",
+    "i": 20,
+    "name": "proc-macro-error",
+    "version": "1.0.4",
     "mode": "todo",
     "target": "",
-    "start": 14.32,
-    "duration": 0.58,
-    "rmeta_time": 0.53,
+    "start": 3.48,
+    "duration": 0.22,
+    "rmeta_time": 0.14,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 29,
-    "name": "regex-lite",
-    "version": "0.1.5",
+    "i": 21,
+    "name": "proc-macro2-diagnostics",
+    "version": "0.10.1",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 3.7,
+    "duration": 0.02,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 22,
+    "name": "terminal_size",
+    "version": "0.3.0",
     "mode": "todo",
     "target": "",
-    "start": 14.91,
-    "duration": 3.11,
-    "rmeta_time": 0.59,
+    "start": 3.72,
+    "duration": 0.09,
+    "rmeta_time": 0.05,
     "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 23,
+    "name": "utf8-width",
+    "version": "0.1.7",
+    "mode": "todo",
+    "target": "",
+    "start": 3.81,
+    "duration": 0.04,
+    "rmeta_time": 0.02,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      34
+    ]
+  },
+  {
+    "i": 24,
+    "name": "clap_lex",
+    "version": "0.6.0",
+    "mode": "todo",
+    "target": "",
+    "start": 3.85,
+    "duration": 0.3,
+    "rmeta_time": 0.1,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 25,
+    "name": "proc-macro2-diagnostics",
+    "version": "0.10.1",
+    "mode": "todo",
+    "target": "",
+    "start": 4.15,
+    "duration": 0.19,
+    "rmeta_time": 0.11,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 26,
+    "name": "libc",
+    "version": "0.2.151",
+    "mode": "todo",
+    "target": " build script",
+    "start": 4.34,
+    "duration": 0.18,
+    "rmeta_time": null,
+    "unlocked_units": [
+      33
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 27,
+    "name": "anstyle",
+    "version": "1.0.4",
+    "mode": "todo",
+    "target": "",
+    "start": 4.52,
+    "duration": 0.21,
+    "rmeta_time": 0.13,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      28
+    ]
+  },
+  {
+    "i": 28,
+    "name": "clap_builder",
+    "version": "4.4.12",
+    "mode": "todo",
+    "target": "",
+    "start": 4.72,
+    "duration": 12.57,
+    "rmeta_time": 2.27,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      39
+    ]
+  },
+  {
+    "i": 29,
+    "name": "thiserror-impl",
+    "version": "1.0.56",
+    "mode": "todo",
+    "target": "",
+    "start": 5.68,
+    "duration": 1.02,
+    "rmeta_time": null,
+    "unlocked_units": [
+      30
+    ],
     "unlocked_rmeta_units": []
   },
   {
     "i": 30,
-    "name": "condtype",
-    "version": "1.3.0",
+    "name": "thiserror",
+    "version": "1.0.56",
     "mode": "todo",
     "target": "",
-    "start": 15.71,
+    "start": 6.7,
     "duration": 0.05,
     "rmeta_time": 0.03,
     "unlocked_units": [],
@@ -950,89 +1065,255 @@ const UNIT_DATA = [
   },
   {
     "i": 31,
-    "name": "cfg-if",
-    "version": "1.0.0",
-    "mode": "todo",
-    "target": "",
-    "start": 15.76,
-    "duration": 0.07,
-    "rmeta_time": 0.04,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      32
-    ]
-  },
-  {
-    "i": 32,
-    "name": "divan",
+    "name": "syn_derive",
     "version": "0.1.8",
     "mode": "todo",
     "target": "",
-    "start": 15.83,
-    "duration": 4.79,
-    "rmeta_time": 0.77,
+    "start": 6.75,
+    "duration": 0.39,
+    "rmeta_time": null,
     "unlocked_units": [
-      35,
-      36,
+      32
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 32,
+    "name": "rstml",
+    "version": "0.11.2",
+    "mode": "todo",
+    "target": "",
+    "start": 7.14,
+    "duration": 0.66,
+    "rmeta_time": 0.38,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 33,
+    "name": "libc",
+    "version": "0.2.151",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 7.8,
+    "duration": 0.02,
+    "rmeta_time": null,
+    "unlocked_units": [
+      38
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 34,
+    "name": "html-escape",
+    "version": "0.2.13",
+    "mode": "todo",
+    "target": "",
+    "start": 7.82,
+    "duration": 0.5,
+    "rmeta_time": 0.46,
+    "unlocked_units": [
       37
     ],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 33,
-    "name": "tinytemplate",
-    "version": "1.2.1",
+    "i": 35,
+    "name": "utf8-width",
+    "version": "0.1.7",
     "mode": "todo",
     "target": "",
-    "start": 18.02,
-    "duration": 1.55,
-    "rmeta_time": 0.25,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 34,
-    "name": "lazy_static",
-    "version": "1.4.0",
-    "mode": "todo",
-    "target": "",
-    "start": 19.57,
+    "start": 8.32,
     "duration": 0.04,
     "rmeta_time": 0.03,
     "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 35,
-    "name": "ssr_template_benchmarks",
-    "version": "0.1.0",
-    "mode": "todo",
-    "target": " bin \"ssr_template_benchmarks\" (test)",
-    "start": 20.62,
-    "duration": 0.08,
-    "rmeta_time": null,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
+    "unlocked_rmeta_units": [
+      36
+    ]
   },
   {
     "i": 36,
-    "name": "ssr_template_benchmarks",
-    "version": "0.1.0",
+    "name": "html-escape",
+    "version": "0.2.13",
     "mode": "todo",
-    "target": " bench \"tinytemplate\" (test)",
-    "start": 20.62,
-    "duration": 1.37,
-    "rmeta_time": null,
+    "target": "",
+    "start": 8.36,
+    "duration": 0.56,
+    "rmeta_time": 0.48,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 37,
+    "name": "hypertext-macros",
+    "version": "0.3.0",
+    "mode": "todo",
+    "target": "",
+    "start": 8.93,
+    "duration": 0.9,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 38,
+    "name": "libc",
+    "version": "0.2.151",
+    "mode": "todo",
+    "target": "",
+    "start": 9.83,
+    "duration": 0.53,
+    "rmeta_time": 0.5,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 39,
+    "name": "clap",
+    "version": "4.4.13",
+    "mode": "todo",
+    "target": "",
+    "start": 10.36,
+    "duration": 0.04,
+    "rmeta_time": 0.02,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 40,
+    "name": "divan-macros",
+    "version": "0.1.8",
+    "mode": "todo",
+    "target": "",
+    "start": 10.4,
+    "duration": 0.51,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 41,
+    "name": "condtype",
+    "version": "1.3.0",
+    "mode": "todo",
+    "target": "",
+    "start": 10.91,
+    "duration": 0.06,
+    "rmeta_time": 0.04,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 42,
+    "name": "regex-lite",
+    "version": "0.1.5",
+    "mode": "todo",
+    "target": "",
+    "start": 10.97,
+    "duration": 3.24,
+    "rmeta_time": 0.61,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 43,
+    "name": "cfg-if",
+    "version": "1.0.0",
+    "mode": "todo",
+    "target": "",
+    "start": 14.21,
+    "duration": 0.04,
+    "rmeta_time": 0.02,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      47
+    ]
+  },
+  {
+    "i": 44,
+    "name": "itoa",
+    "version": "1.0.10",
+    "mode": "todo",
+    "target": "",
+    "start": 14.25,
+    "duration": 0.09,
+    "rmeta_time": 0.08,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 45,
+    "name": "ryu",
+    "version": "1.0.19",
+    "mode": "todo",
+    "target": "",
+    "start": 14.34,
+    "duration": 0.27,
+    "rmeta_time": 0.09,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      46
+    ]
+  },
+  {
+    "i": 46,
+    "name": "hypertext",
+    "version": "0.3.0",
+    "mode": "todo",
+    "target": "",
+    "start": 14.61,
+    "duration": 0.18,
+    "rmeta_time": 0.16,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 47,
+    "name": "divan",
+    "version": "0.1.8",
+    "mode": "todo",
+    "target": "",
+    "start": 14.79,
+    "duration": 4.19,
+    "rmeta_time": 0.85,
+    "unlocked_units": [
+      48,
+      50,
+      49
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 48,
     "name": "ssr_template_benchmarks",
     "version": "0.1.0",
     "mode": "todo",
     "target": " bin \"ssr_template_benchmarks\"",
-    "start": 20.7,
+    "start": 18.98,
+    "duration": 0.09,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 49,
+    "name": "ssr_template_benchmarks",
+    "version": "0.1.0",
+    "mode": "todo",
+    "target": " bench \"hypertext\" (test)",
+    "start": 18.98,
+    "duration": 0.95,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 50,
+    "name": "ssr_template_benchmarks",
+    "version": "0.1.0",
+    "mode": "todo",
+    "target": " bin \"ssr_template_benchmarks\" (test)",
+    "start": 19.07,
     "duration": 0.09,
     "rmeta_time": null,
     "unlocked_units": [],
@@ -1041,985 +1322,1207 @@ const UNIT_DATA = [
 ];
 const CONCURRENCY_DATA = [
   {
-    "t": 0.071289407,
+    "t": 0.078615607,
     "active": 1,
+    "waiting": 16,
+    "inactive": 34
+  },
+  {
+    "t": 0.078782661,
+    "active": 1,
+    "waiting": 16,
+    "inactive": 34
+  },
+  {
+    "t": 0.07980902,
+    "active": 2,
     "waiting": 15,
-    "inactive": 22
+    "inactive": 34
   },
   {
-    "t": 0.071371607,
+    "t": 0.080138262,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 34
+  },
+  {
+    "t": 0.128450932,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 34
+  },
+  {
+    "t": 0.142697423,
     "active": 2,
     "waiting": 14,
-    "inactive": 22
+    "inactive": 34
   },
   {
-    "t": 0.071457451,
+    "t": 0.142948602,
     "active": 2,
     "waiting": 14,
-    "inactive": 22
+    "inactive": 34
   },
   {
-    "t": 0.072335398,
+    "t": 0.225561132,
     "active": 2,
     "waiting": 14,
-    "inactive": 22
+    "inactive": 33
   },
   {
-    "t": 0.119169137,
+    "t": 0.226354817,
     "active": 2,
     "waiting": 14,
-    "inactive": 22
+    "inactive": 33
   },
   {
-    "t": 0.132453452,
+    "t": 0.262459065,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 33
+  },
+  {
+    "t": 0.270333904,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 32
+  },
+  {
+    "t": 0.270420741,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 32
+  },
+  {
+    "t": 0.378136605,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 29
+  },
+  {
+    "t": 0.378296571,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 29
+  },
+  {
+    "t": 0.458684472,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 28
+  },
+  {
+    "t": 0.459510771,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 28
+  },
+  {
+    "t": 0.475648102,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 28
+  },
+  {
+    "t": 0.476311745,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 28
+  },
+  {
+    "t": 0.562983463,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 27
+  },
+  {
+    "t": 0.563797462,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 27
+  },
+  {
+    "t": 0.594440682,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 26
+  },
+  {
+    "t": 0.784590769,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 25
+  },
+  {
+    "t": 0.785704546,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 25
+  },
+  {
+    "t": 0.81122445,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 25
+  },
+  {
+    "t": 0.811311791,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 25
+  },
+  {
+    "t": 0.844836553,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 25
+  },
+  {
+    "t": 0.844930308,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 25
+  },
+  {
+    "t": 0.881050334,
     "active": 2,
     "waiting": 13,
-    "inactive": 22
+    "inactive": 25
   },
   {
-    "t": 0.132584876,
+    "t": 0.881142664,
     "active": 2,
     "waiting": 13,
+    "inactive": 25
+  },
+  {
+    "t": 0.943825245,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 24
+  },
+  {
+    "t": 0.968934653,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 23
+  },
+  {
+    "t": 0.969042226,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 23
+  },
+  {
+    "t": 1.025764485,
+    "active": 2,
+    "waiting": 14,
     "inactive": 22
   },
   {
-    "t": 0.227027426,
+    "t": 1.032773573,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 22
+  },
+  {
+    "t": 1.278348641,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 21
+  },
+  {
+    "t": 1.279478073,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 21
+  },
+  {
+    "t": 1.411694599,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 21
+  },
+  {
+    "t": 1.625508323,
     "active": 2,
     "waiting": 13,
     "inactive": 21
   },
   {
-    "t": 0.227335103,
+    "t": 1.625743059,
     "active": 2,
     "waiting": 13,
     "inactive": 21
   },
   {
-    "t": 0.290298225,
+    "t": 1.767535948,
     "active": 2,
     "waiting": 13,
     "inactive": 20
   },
   {
-    "t": 0.290393692,
+    "t": 1.76867479,
     "active": 2,
     "waiting": 13,
     "inactive": 20
   },
   {
-    "t": 0.318987725,
+    "t": 2.111442649,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 19
+  },
+  {
+    "t": 2.1428560389999998,
     "active": 2,
     "waiting": 13,
     "inactive": 19
   },
   {
-    "t": 0.319204303,
+    "t": 2.143682535,
     "active": 2,
     "waiting": 13,
     "inactive": 19
   },
   {
-    "t": 0.35926033,
+    "t": 2.643763496,
     "active": 2,
-    "waiting": 12,
+    "waiting": 13,
     "inactive": 19
   },
   {
-    "t": 0.359529641,
+    "t": 2.809889353,
     "active": 2,
-    "waiting": 12,
-    "inactive": 19
+    "waiting": 14,
+    "inactive": 18
   },
   {
-    "t": 0.658871871,
+    "t": 3.314648787,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 18
+  },
+  {
+    "t": 3.436796744,
     "active": 2,
     "waiting": 13,
     "inactive": 18
   },
   {
-    "t": 0.756464648,
+    "t": 3.4371037700000002,
     "active": 2,
     "waiting": 13,
     "inactive": 18
   },
   {
-    "t": 0.786903079,
+    "t": 3.482289804,
     "active": 2,
     "waiting": 12,
     "inactive": 18
   },
   {
-    "t": 0.787098256,
+    "t": 3.482416847,
     "active": 2,
     "waiting": 12,
     "inactive": 18
   },
   {
-    "t": 0.86169754,
+    "t": 3.61838314,
+    "active": 2,
+    "waiting": 12,
+    "inactive": 18
+  },
+  {
+    "t": 3.698843171,
     "active": 2,
     "waiting": 11,
     "inactive": 18
   },
   {
-    "t": 0.86202931,
+    "t": 3.699542583,
     "active": 2,
     "waiting": 11,
     "inactive": 18
   },
   {
-    "t": 0.930961705,
+    "t": 3.714996385,
     "active": 2,
-    "waiting": 12,
+    "waiting": 10,
+    "inactive": 18
+  },
+  {
+    "t": 3.71589677,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 18
+  },
+  {
+    "t": 3.7679828410000002,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 18
+  },
+  {
+    "t": 3.807917246,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 18
+  },
+  {
+    "t": 3.808093591,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 18
+  },
+  {
+    "t": 3.832310832,
+    "active": 2,
+    "waiting": 10,
     "inactive": 17
   },
   {
-    "t": 0.978923748,
+    "t": 3.846022634,
     "active": 2,
-    "waiting": 13,
-    "inactive": 16
+    "waiting": 9,
+    "inactive": 17
   },
   {
-    "t": 1.020603999,
+    "t": 3.846376324,
     "active": 2,
-    "waiting": 12,
-    "inactive": 16
+    "waiting": 9,
+    "inactive": 17
   },
   {
-    "t": 1.020732329,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 16
-  },
-  {
-    "t": 1.201219214,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 16
-  },
-  {
-    "t": 1.201546073,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 16
-  },
-  {
-    "t": 1.701632732,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 16
-  },
-  {
-    "t": 1.807912902,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 15
-  },
-  {
-    "t": 2.308041931,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 15
-  },
-  {
-    "t": 2.371030986,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 15
-  },
-  {
-    "t": 2.371172047,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 15
-  },
-  {
-    "t": 2.50305083,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 14
-  },
-  {
-    "t": 2.503423886,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 14
-  },
-  {
-    "t": 2.521216148,
+    "t": 3.926459682,
     "active": 2,
     "waiting": 10,
-    "inactive": 14
+    "inactive": 16
   },
   {
-    "t": 2.5213531160000002,
+    "t": 3.950774328,
     "active": 2,
     "waiting": 10,
+    "inactive": 16
+  },
+  {
+    "t": 4.148776743,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 16
+  },
+  {
+    "t": 4.149058773,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 16
+  },
+  {
+    "t": 4.259086677,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 16
+  },
+  {
+    "t": 4.336737579,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 16
+  },
+  {
+    "t": 4.336848993,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 16
+  },
+  {
+    "t": 4.516976695,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 15
+  },
+  {
+    "t": 4.51741714,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 15
+  },
+  {
+    "t": 4.651571127,
+    "active": 2,
+    "waiting": 9,
     "inactive": 14
   },
   {
-    "t": 2.5857733080000003,
+    "t": 4.722838642,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 14
+  },
+  {
+    "t": 4.723083259,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 14
+  },
+  {
+    "t": 5.223166972,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 14
+  },
+  {
+    "t": 5.679903518,
     "active": 2,
     "waiting": 10,
-    "inactive": 14
-  },
-  {
-    "t": 2.618863095,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 14
-  },
-  {
-    "t": 2.6191839139999997,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 14
-  },
-  {
-    "t": 2.749861524,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 14
-  },
-  {
-    "t": 2.971566888,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 14
-  },
-  {
-    "t": 2.971890492,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 14
-  },
-  {
-    "t": 3.055664369,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 13
-  },
-  {
-    "t": 3.055751863,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 13
-  },
-  {
-    "t": 3.093106623,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 13
-  },
-  {
-    "t": 3.184752772,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 12
-  },
-  {
-    "t": 3.262176783,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 12
-  },
-  {
-    "t": 3.262411262,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 12
-  },
-  {
-    "t": 3.438161035,
-    "active": 2,
-    "waiting": 8,
     "inactive": 11
   },
   {
-    "t": 3.438430221,
+    "t": 5.680080922,
     "active": 2,
-    "waiting": 8,
+    "waiting": 10,
     "inactive": 11
   },
   {
-    "t": 3.457197066,
+    "t": 6.180166773,
     "active": 2,
-    "waiting": 8,
+    "waiting": 10,
+    "inactive": 11
+  },
+  {
+    "t": 6.680343125,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 11
+  },
+  {
+    "t": 6.70082291,
+    "active": 2,
+    "waiting": 10,
     "inactive": 10
   },
   {
-    "t": 3.457288809,
+    "t": 6.700955371,
     "active": 2,
-    "waiting": 8,
+    "waiting": 10,
     "inactive": 10
   },
   {
-    "t": 3.957372132,
+    "t": 6.732539136,
     "active": 2,
-    "waiting": 8,
+    "waiting": 10,
     "inactive": 10
   },
   {
-    "t": 4.45850968,
+    "t": 6.748602441,
     "active": 2,
-    "waiting": 8,
+    "waiting": 9,
     "inactive": 10
   },
   {
-    "t": 4.630339617,
+    "t": 6.7488287719999995,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 10
+  },
+  {
+    "t": 6.991572098,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 9
+  },
+  {
+    "t": 7.137594573,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 8
+  },
+  {
+    "t": 7.138488949,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 8
+  },
+  {
+    "t": 7.514388844,
+    "active": 2,
+    "waiting": 10,
+    "inactive": 8
+  },
+  {
+    "t": 7.801323049,
     "active": 2,
     "waiting": 9,
     "inactive": 8
   },
   {
-    "t": 4.630557905,
+    "t": 7.801629065,
     "active": 2,
     "waiting": 9,
     "inactive": 8
   },
   {
-    "t": 5.130645493,
+    "t": 7.821995738,
     "active": 2,
     "waiting": 9,
-    "inactive": 8
-  },
-  {
-    "t": 5.616185002,
-    "active": 2,
-    "waiting": 10,
     "inactive": 7
   },
   {
-    "t": 6.116327525,
+    "t": 7.822140845,
     "active": 2,
-    "waiting": 10,
+    "waiting": 9,
     "inactive": 7
   },
   {
-    "t": 6.616487211,
+    "t": 8.277836775,
     "active": 2,
-    "waiting": 10,
+    "waiting": 9,
     "inactive": 7
   },
   {
-    "t": 7.11662932,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 7
-  },
-  {
-    "t": 7.486387953,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 7.486729212,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 7.986818375,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 8.486987903,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 8.987143035999999,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 9.487286453,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 9.987440915,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 10.182599838,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 10.325003988,
+    "t": 8.322676893,
     "active": 2,
     "waiting": 9,
     "inactive": 6
   },
   {
-    "t": 10.325314809,
+    "t": 8.323086160999999,
     "active": 2,
     "waiting": 9,
     "inactive": 6
   },
   {
-    "t": 10.328036403,
+    "t": 8.348336954,
     "active": 2,
-    "waiting": 8,
-    "inactive": 6
+    "waiting": 10,
+    "inactive": 5
   },
   {
-    "t": 10.328160397,
+    "t": 8.359868689,
     "active": 2,
-    "waiting": 8,
-    "inactive": 6
+    "waiting": 9,
+    "inactive": 5
   },
   {
-    "t": 10.418599321,
+    "t": 8.360304385,
     "active": 2,
-    "waiting": 8,
-    "inactive": 6
+    "waiting": 9,
+    "inactive": 5
   },
   {
-    "t": 10.605574439,
+    "t": 8.838237369,
     "active": 2,
-    "waiting": 7,
-    "inactive": 6
+    "waiting": 9,
+    "inactive": 5
   },
   {
-    "t": 10.610019562,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 6
-  },
-  {
-    "t": 10.760287819,
+    "t": 8.924999885,
     "active": 2,
     "waiting": 8,
     "inactive": 5
   },
   {
-    "t": 10.77796431,
+    "t": 8.925242996,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 5
+  },
+  {
+    "t": 9.425326711,
+    "active": 2,
+    "waiting": 8,
+    "inactive": 5
+  },
+  {
+    "t": 9.829060444,
     "active": 2,
     "waiting": 7,
     "inactive": 5
   },
   {
-    "t": 10.778213739,
+    "t": 9.830117022,
     "active": 2,
     "waiting": 7,
     "inactive": 5
   },
   {
-    "t": 11.278303087,
+    "t": 10.325582159,
     "active": 2,
     "waiting": 7,
     "inactive": 5
   },
   {
-    "t": 11.624592072,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 12.124717877,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 12.630342477,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 13.130477204,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 13.631461212,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 13.733492702,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 4
-  },
-  {
-    "t": 13.733683349,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 4
-  },
-  {
-    "t": 13.764433151,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 4
-  },
-  {
-    "t": 13.799881063,
+    "t": 10.357669208,
     "active": 2,
     "waiting": 6,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 13.799947504,
+    "t": 10.35788848,
     "active": 2,
     "waiting": 6,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 14.300029927,
+    "t": 10.380329428,
     "active": 2,
     "waiting": 6,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 14.319207489,
+    "t": 10.398153119,
     "active": 2,
     "waiting": 5,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 14.319300339,
+    "t": 10.398318796,
     "active": 2,
     "waiting": 5,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 14.81937854,
+    "t": 10.898406876,
     "active": 2,
     "waiting": 5,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 14.846183425,
-    "active": 2,
-    "waiting": 5,
-    "inactive": 4
-  },
-  {
-    "t": 14.903154062,
+    "t": 10.907873854,
     "active": 2,
     "waiting": 4,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 14.906524107,
+    "t": 10.908165563,
     "active": 2,
     "waiting": 4,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 15.406611664,
+    "t": 10.95280772,
     "active": 2,
     "waiting": 4,
-    "inactive": 4
+    "inactive": 5
   },
   {
-    "t": 15.497518701,
+    "t": 10.971562658,
     "active": 2,
-    "waiting": 4,
-    "inactive": 4
+    "waiting": 3,
+    "inactive": 5
   },
   {
-    "t": 15.709162954,
+    "t": 10.971790791,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 11.471917798,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 11.583816845,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 12.083942247,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 12.584095471,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 13.084252397,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 13.584394874000001,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 14.084531395,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 14.21262445,
+    "active": 2,
+    "waiting": 2,
+    "inactive": 5
+  },
+  {
+    "t": 14.212979975,
+    "active": 2,
+    "waiting": 2,
+    "inactive": 5
+  },
+  {
+    "t": 14.234129419,
     "active": 2,
     "waiting": 3,
     "inactive": 4
   },
   {
-    "t": 15.709347988,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 4
-  },
-  {
-    "t": 15.73957336,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 4
-  },
-  {
-    "t": 15.755768269,
+    "t": 14.250020145,
     "active": 2,
     "waiting": 2,
     "inactive": 4
   },
   {
-    "t": 15.755881798,
+    "t": 14.250266112,
     "active": 2,
     "waiting": 2,
     "inactive": 4
   },
   {
-    "t": 15.795976127,
+    "t": 14.327605452,
     "active": 2,
-    "waiting": 3,
-    "inactive": 3
+    "waiting": 2,
+    "inactive": 4
   },
   {
-    "t": 15.822682562,
+    "t": 14.340172568,
+    "active": 2,
+    "waiting": 1,
+    "inactive": 4
+  },
+  {
+    "t": 14.340393478,
+    "active": 2,
+    "waiting": 1,
+    "inactive": 4
+  },
+  {
+    "t": 14.432542994,
     "active": 2,
     "waiting": 2,
     "inactive": 3
   },
   {
-    "t": 15.828459384,
-    "active": 2,
-    "waiting": 2,
-    "inactive": 3
-  },
-  {
-    "t": 16.328542625,
-    "active": 2,
-    "waiting": 2,
-    "inactive": 3
-  },
-  {
-    "t": 16.595389484000002,
-    "active": 2,
-    "waiting": 2,
-    "inactive": 3
-  },
-  {
-    "t": 17.095519335,
-    "active": 2,
-    "waiting": 2,
-    "inactive": 3
-  },
-  {
-    "t": 17.595654559,
-    "active": 2,
-    "waiting": 2,
-    "inactive": 3
-  },
-  {
-    "t": 18.020583019,
+    "t": 14.610777717,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 18.020703413,
+    "t": 14.611144666,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 18.266434132,
+    "t": 14.770238902,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 18.76658272,
+    "t": 14.790646547,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 14.790891453,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 15.292229816,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 15.644652025,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 16.144785278,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 16.644950319,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.145091323,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.295919912,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.296214569,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297164387,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297199035,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297214535,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297230238,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297244323,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297259223,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297274024,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.29728883,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297330479,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.29734564,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297362427,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.2973703,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297378673,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297386808,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297394449,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.29740273,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297411472,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297420324,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297429328,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297436897,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297445314,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297453444,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.29746118,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297468749,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297476343,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297483742,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.29749198,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297500822,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297509176,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297518085,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297526883,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297534571,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297542495,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297550669,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.29755898,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297567447,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297575358,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297584184,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297592565,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297600598,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297608313,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.29761645,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297625063,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.29763318,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.297641998,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 17.797719938,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 18.29786675,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 18.798015973,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 18.980448806,
     "active": 2,
     "waiting": 1,
-    "inactive": 3
+    "inactive": 0
   },
   {
-    "t": 19.268393295,
-    "active": 2,
-    "waiting": 1,
-    "inactive": 3
-  },
-  {
-    "t": 19.568860676,
-    "active": 2,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 19.569046381,
-    "active": 2,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 19.599476915,
-    "active": 2,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 19.61082576,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 19.610974302,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.111065395,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573780281,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573865752,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573885292,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573903854,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573922235,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573940961,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573962596,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573985202,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574004543,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574024001,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574041958,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574062014,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574080041,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574102942,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574122125,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574142916,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574161241,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574183109,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574200758,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574218681,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574236327,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574253792,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574281861,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574299959,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574322229,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574343403,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574361926999998,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.57438226,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.5744026,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574420751,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.57444333,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574463583,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.616397095,
+    "t": 18.980573959,
     "active": 2,
     "waiting": 1,
     "inactive": 0
   },
   {
-    "t": 20.616480121,
+    "t": 18.981421618,
     "active": 2,
     "waiting": 1,
     "inactive": 0
   },
   {
-    "t": 20.616529188,
-    "active": 2,
-    "waiting": 1,
-    "inactive": 0
-  },
-  {
-    "t": 20.697838644,
+    "t": 19.074447695,
     "active": 2,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.698162599,
+    "t": 19.07469251,
     "active": 2,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.788656403,
+    "t": 19.162503932,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.788849017,
+    "t": 19.163310036,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 21.288935044,
+    "t": 19.663405071,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 21.789082935,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 0
-  },
-  {
-    "t": 21.982225247,
+    "t": 19.933534696,
     "active": 0,
     "waiting": 0,
     "inactive": 0
@@ -2027,244 +2530,240 @@ const CONCURRENCY_DATA = [
 ];
 const CPU_USAGE = [
   [
-    0.227027692,
+    0.225561521,
     100.0
   ],
   [
-    0.359261656,
+    0.378137685,
     100.0
   ],
   [
-    0.658873046,
+    0.562984839,
     100.0
   ],
   [
-    0.786903317,
+    0.784591291,
     100.0
   ],
   [
-    0.930962726,
+    0.943827183,
     100.0
   ],
   [
-    1.201220382,
+    1.27834909,
     100.0
   ],
   [
-    1.701634802,
+    1.411696472,
     100.0
   ],
   [
-    1.807913366,
+    1.6255087160000001,
     100.0
   ],
   [
-    2.308042254,
+    1.767537251,
     100.0
   ],
   [
-    2.503139277,
+    2.111444628,
     100.0
   ],
   [
-    2.618863313,
+    2.643765572,
     100.0
   ],
   [
-    2.74986385,
+    2.8098896460000002,
     100.0
   ],
   [
-    2.971567157,
+    3.314649457,
     100.0
   ],
   [
-    3.093108721,
+    3.436797109,
     100.0
   ],
   [
-    3.2621770469999998,
+    3.618385294,
     100.0
   ],
   [
-    3.438162258,
+    3.767984822,
     100.0
   ],
   [
-    3.957374413,
+    3.926461819,
     100.0
   ],
   [
-    4.4585100220000005,
+    4.148791004,
     100.0
   ],
   [
-    4.6303399039999995,
+    4.259089116,
     100.0
   ],
   [
-    5.130647739,
+    4.516977844,
     100.0
   ],
   [
-    5.616185382,
+    4.651573434,
     100.0
   ],
   [
-    6.116327868,
+    5.223169486,
     100.0
   ],
   [
-    6.616487571,
+    5.679904056,
     100.0
   ],
   [
-    7.116630066,
+    6.180169219,
     100.0
   ],
   [
-    7.486388239,
+    6.680343748,
     100.0
   ],
   [
-    7.98682055,
+    6.991574013,
     100.0
   ],
   [
-    8.48699805,
+    7.137594769,
     100.0
   ],
   [
-    8.987143394,
+    7.514391048,
     100.0
   ],
   [
-    9.487286798,
+    7.801323444,
     100.0
   ],
   [
-    9.987441564000001,
+    8.277839023,
     100.0
   ],
   [
-    10.182600176,
+    8.838239466,
     100.0
   ],
   [
-    10.325004275,
+    9.425329226,
     100.0
   ],
   [
-    10.605574744,
+    9.829060731,
     100.0
   ],
   [
-    10.760288202,
+    10.325584207,
     100.0
   ],
   [
-    11.278305734,
+    10.898409052,
     100.0
   ],
   [
-    11.624592767,
+    11.471920002,
     100.0
   ],
   [
-    12.124718257,
+    11.583817521,
     100.0
   ],
   [
-    12.630342857,
+    12.083942688,
     100.0
   ],
   [
-    13.13047757,
+    12.584095839,
     100.0
   ],
   [
-    13.631461942,
+    13.084252767,
     100.0
   ],
   [
-    13.733493145,
+    13.584395284,
     100.0
   ],
   [
-    14.300032384,
+    14.084531901,
     100.0
   ],
   [
-    14.8193812,
+    14.212624971,
     100.0
   ],
   [
-    15.406614164,
+    14.327721129,
     100.0
   ],
   [
-    15.709163351,
+    14.432544846,
     100.0
   ],
   [
-    15.822682817,
+    14.610778121,
     100.0
   ],
   [
-    16.328545253,
+    14.770241288,
     100.0
   ],
   [
-    16.595389849,
+    15.292231802,
     100.0
   ],
   [
-    17.095519911,
+    15.644652472,
     100.0
   ],
   [
-    17.595655408,
+    16.144785646,
     100.0
   ],
   [
-    18.020583239,
+    16.64495071,
     100.0
   ],
   [
-    18.266435446,
+    17.145091993,
     100.0
   ],
   [
-    18.766583104,
+    17.295920233,
     100.0
   ],
   [
-    19.268393658,
+    17.797720422,
+    98.01980198019803
+  ],
+  [
+    18.297867234,
     100.0
   ],
   [
-    19.568861052,
+    18.798016329,
     100.0
   ],
   [
-    20.111065784,
+    18.980449175,
+    86.11111111111111
+  ],
+  [
+    19.162505134,
     100.0
   ],
   [
-    20.573780605,
+    19.663405684,
     100.0
-  ],
-  [
-    20.69783893,
-    80.76923076923077
-  ],
-  [
-    21.288935441,
-    100.0
-  ],
-  [
-    21.789083288,
-    99.0
   ]
 ];
 // Position of the vertical axis.
