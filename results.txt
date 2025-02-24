@@ -1,0 +1,49 @@
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+askama        fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  34.88 ms      │ 81.22 ms      │ 35.74 ms      │ 38.76 ms      │ 100     │ 100
+╰─ teams      428.7 ns      │ 3.935 µs      │ 714.7 ns      │ 722.5 ns      │ 100     │ 100
+
+fhtml         fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  64.14 ms      │ 119.4 ms      │ 66.75 ms      │ 70.29 ms      │ 100     │ 100
+╰─ teams      574.7 ns      │ 3.099 µs      │ 737.7 ns      │ 795.7 ns      │ 100     │ 100
+
+handlebars    fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  391.1 ms      │ 524.4 ms      │ 408.2 ms      │ 419.3 ms      │ 100     │ 100
+╰─ teams      2.881 µs      │ 16.03 µs      │ 3.376 µs      │ 3.907 µs      │ 100     │ 100
+
+html_node     fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  234.1 ms      │ 405.1 ms      │ 239.9 ms      │ 250 ms        │ 100     │ 100
+╰─ teams      2.38 µs       │ 13.19 µs      │ 3.37 µs       │ 3.334 µs      │ 100     │ 100
+
+hyped         fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  68.23 ms      │ 273.2 ms      │ 92.08 ms      │ 105.5 ms      │ 100     │ 100
+╰─ teams      2.006 µs      │ 12.54 µs      │ 2.247 µs      │ 2.386 µs      │ 100     │ 100
+
+hypertext     fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  7.439 ms      │ 60.12 ms      │ 11.53 ms      │ 12.43 ms      │ 100     │ 100
+╰─ teams      89.08 ns      │ 220.9 ns      │ 93.48 ns      │ 107.4 ns      │ 100     │ 3200
+
+maud          fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  8.502 ms      │ 13.52 ms      │ 8.572 ms      │ 8.998 ms      │ 100     │ 100
+╰─ teams      109.7 ns      │ 404 ns        │ 148.8 ns      │ 153.5 ns      │ 100     │ 1600
+
+minijinja     fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  204.3 ms      │ 667.5 ms      │ 208.6 ms      │ 224.6 ms      │ 100     │ 100
+╰─ teams      2.466 µs      │ 16.61 µs      │ 2.598 µs      │ 3.182 µs      │ 100     │ 100
+
+tera          fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  106.5 ms      │ 233.8 ms      │ 108.4 ms      │ 118.4 ms      │ 100     │ 100
+╰─ teams      3.659 µs      │ 25.37 µs      │ 3.79 µs       │ 4.824 µs      │ 100     │ 100
+
+tinytemplate  fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  35.5 ms       │ 77.07 ms      │ 36.91 ms      │ 39.84 ms      │ 100     │ 100
+╰─ teams      1.295 µs      │ 8.988 µs      │ 1.965 µs      │ 2.144 µs      │ 100     │ 100
+
+vy            fastest       │ slowest       │ median        │ mean          │ samples │ iters
+├─ big_table  3.654 ms      │ 10.95 ms      │ 3.774 ms      │ 4.297 ms      │ 100     │ 100
+╰─ teams      150.5 ns      │ 319.7 ns      │ 165.9 ns      │ 189.4 ns      │ 100     │ 800
+

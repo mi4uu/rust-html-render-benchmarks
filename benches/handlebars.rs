@@ -14,7 +14,7 @@ static BIG_TABLE: &'static str = r#"
 </table>
 "#;
 
-const SIZE: usize = 100;
+const SIZE: usize = 1000;
 
 #[divan::bench]
 fn big_table(bencher: divan::Bencher) {

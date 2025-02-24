@@ -4,7 +4,7 @@ fn main() {
     divan::main()
 }
 
-const SIZE: usize = 100;
+const SIZE: usize = 1000;
 
 #[divan::bench]
 fn big_table(bencher: divan::Bencher) {

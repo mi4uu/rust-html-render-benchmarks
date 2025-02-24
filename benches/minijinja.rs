@@ -4,7 +4,7 @@ fn main() {
     divan::main()
 }
 
-const SIZE: usize = 100;
+const SIZE: usize = 1000;
 static BIG_TABLE: &'static str = r#"
 <table>
 {% for row in table %}
