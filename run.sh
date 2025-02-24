@@ -31,6 +31,13 @@ for FEATURE_NAME in "${FEATURES[@]}"; do
     cat "./target/cargo-timings/cargo-timing.html" > "./docs/cargo-timing-$FEATURE_NAME.html"
     echo "${LINK}${FEATURE_NAME}${LINK2}${FEATURE_NAME}</a>" >> "docs/list.html"
 
+    sed -i.bak '0,/^const SIZE: usize = /s/=.*/= 1002;/' "./benches/${FEATURE_NAME}.rs"
+    cargo bench -Z unstable-options --timings=html --features "$FEATURE_NAME"
+    cat "./target/cargo-timings/cargo-timing.html" > "./docs/cargo-timing-$FEATURE_NAME-recompile.html"
+    echo "${LINK}${FEATURE_NAME}-recompile${LINK2}${FEATURE_NAME} REBUILD ON CHANGE</a>" >> "docs/list.html"
+    sed -i.bak '0,/^const SIZE: usize = /s/=.*/= 1000;/' "./benches/${FEATURE_NAME}.rs"
+
+
     # Check if the command succeeded
     if [ $? -eq 0 ]; then
         echo "Benchmarks for $FEATURE_NAME completed successfully."

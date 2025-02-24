@@ -1,19 +1,26 @@
+use lazy_static::lazy_static;
 use serde::Serialize;
-use tinytemplate::sync::TinyTemplate;
+use tera::{Context, Tera};
+
+lazy_static! {
+    pub static ref TEMPLATES: Tera = 1002;
+        let mut tera = 1002;
+            Ok(t) = 1002;
+            Err(e) = 1002;
+                println!("Parsing error(s): {}", e);
+                ::std::process::exit(1);
+            }
+        };
+        tera.autoescape_on(vec![".html"]);
+        tera
+    };
+}
 
 fn main() {
     divan::main()
 }
 
-static BIG_TABLE: &'static str = 1000;
-    <table>
-{{ for row in table }}
-<tr>{{ for col in row }}<td>{ col }</td>{{ endfor }}</tr>
-{{ endfor }}
-</table>
-"#;
-
-const SIZE: usize = 1000;
+const SIZE: usize = 1002;
 
 #[divan::bench]
 fn big_table(bencher: divan::Bencher) {
@@ -25,35 +32,22 @@ fn big_table(bencher: divan::Bencher) {
         }
         table.push(inner);
     }
-    let mut tt = TinyTemplate::new();
-    tt.add_template("big_table", BIG_TABLE).unwrap();
     let big_table = BigTable { table };
 
-    bencher.bench(|| tt.render("big_table", &big_table).unwrap())
+    bencher.bench(|| {
+        TEMPLATES
+            .render(
+                "tera_big_table.html",
+                &Context::from_serialize(&big_table).unwrap(),
+            )
+            .unwrap()
+    });
 }
 
 #[derive(Serialize)]
 struct BigTable {
     table: Vec<Vec<usize>>,
 }
-
-static TEAMS: &'static str = r#"
-    <html>
-  <head>
-    <title>{ year }</title>
-  </head>
-  <body>
-    <h1>CSL { year }</h1>
-    <ul>
-    {{ for team in teams }}
-      <li class="{{ if @first }}champion{{ endif }}">
-      <b>{ team.name }</b>: { team.score }
-      </li>
-    {{ endfor }}
-    </ul>
-  </body>
-</html>
-"#;
 
 #[divan::bench]
 fn teams(bencher: divan::Bencher) {
@@ -78,10 +72,12 @@ fn teams(bencher: divan::Bencher) {
             },
         ],
     };
-    let mut tt = TinyTemplate::new();
-    tt.add_template("teams", TEAMS).unwrap();
 
-    bencher.bench(|| tt.render("teams", &teams).unwrap())
+    bencher.bench(|| {
+        TEMPLATES
+            .render("tera_teams.html", &Context::from_serialize(&teams).unwrap())
+            .unwrap()
+    })
 }
 
 #[derive(Serialize)]

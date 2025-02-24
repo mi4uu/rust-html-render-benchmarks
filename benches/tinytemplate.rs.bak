@@ -5,7 +5,7 @@ fn main() {
     divan::main()
 }
 
-static BIG_TABLE: &'static str = 1000;
+static BIG_TABLE: &'static str = 1002;
     <table>
 {{ for row in table }}
 <tr>{{ for col in row }}<td>{ col }</td>{{ endfor }}</tr>
@@ -13,7 +13,7 @@ static BIG_TABLE: &'static str = 1000;
 </table>
 "#;
 
-const SIZE: usize = 1000;
+const SIZE: usize = 1002;
 
 #[divan::bench]
 fn big_table(bencher: divan::Bencher) {

@@ -1,26 +1,10 @@
-use lazy_static::lazy_static;
-use serde::Serialize;
-use tera::{Context, Tera};
-
-lazy_static! {
-    pub static ref TEMPLATES: Tera = 1000;
-        let mut tera = 1000;
-            Ok(t) = 1000;
-            Err(e) = 1000;
-                println!("Parsing error(s): {}", e);
-                ::std::process::exit(1);
-            }
-        };
-        tera.autoescape_on(vec![".html"]);
-        tera
-    };
-}
+use hyped::*;
 
 fn main() {
     divan::main()
 }
 
-const SIZE: usize = 1000;
+const SIZE: usize = 1002;
 
 #[divan::bench]
 fn big_table(bencher: divan::Bencher) {
@@ -32,21 +16,16 @@ fn big_table(bencher: divan::Bencher) {
         }
         table.push(inner);
     }
-    let big_table = BigTable { table };
 
-    bencher.bench(|| {
-        TEMPLATES
-            .render(
-                "tera_big_table.html",
-                &Context::from_serialize(&big_table).unwrap(),
-            )
-            .unwrap()
-    });
+    bencher.bench(|| big_table_render(&table))
 }
 
-#[derive(Serialize)]
-struct BigTable {
-    table: Vec<Vec<usize>>,
+fn big_table_render(rows: &Vec<Vec<usize>>) -> String {
+    render(table(
+        rows.iter()
+            .map(|row| tr(row.iter().map(|col| td(*col)).collect::<Vec<_>>()))
+            .collect::<Vec<_>>(),
+    ))
 }
 
 #[divan::bench]
@@ -73,20 +52,35 @@ fn teams(bencher: divan::Bencher) {
         ],
     };
 
-    bencher.bench(|| {
-        TEMPLATES
-            .render("tera_teams.html", &Context::from_serialize(&teams).unwrap())
-            .unwrap()
-    })
+    bencher.bench(|| teams_render(&teams))
 }
 
-#[derive(Serialize)]
+fn teams_render(teams: &Teams) -> String {
+    render((html((
+        head(title(teams.year)),
+        body((
+            h1(("CSL ", teams.year)),
+            ul(teams
+                .teams
+                .iter()
+                .enumerate()
+                .map(|(idx, team)| {
+                    li((b(team.name.clone()), ": ", team.score)).class(if idx == 0 {
+                        "champion"
+                    } else {
+                        ""
+                    })
+                })
+                .collect::<Vec<_>>()),
+        )),
+    )),))
+}
+
 struct Teams {
     year: u16,
     teams: Vec<Team>,
 }
 
-#[derive(Serialize)]
 struct Team {
     name: String,
     score: u8,

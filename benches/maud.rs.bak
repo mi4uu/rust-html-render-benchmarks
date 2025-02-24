@@ -1,9 +1,10 @@
-use std::fmt::Arguments;
+use maud::html;
+
 fn main() {
     divan::main()
 }
 
-const SIZE: usize = 1000;
+const SIZE: usize = 1002;
 
 #[divan::bench]
 fn big_table(bencher: divan::Bencher) {
@@ -20,19 +21,19 @@ fn big_table(bencher: divan::Bencher) {
 }
 
 fn big_table_render(rows: &Vec<Vec<usize>>) -> String {
-    fhtml::format!{
-        <table>
-            {rows.iter().map(|cols| fhtml::format! {
-                <tr>
-                    {cols.iter().map(|col|  fhtml::format!{
-                        <td>{*col}</td>
-                    }).collect::<Vec<String>>().join("\n")}
-                </tr>
-            }.to_string()).collect::<Vec<String>>().join("\n")}
-        </table>
-    }
+    let page = html! {
+        table {
+            @for row in rows {
+                tr {
+                    @for col in row {
+                        td { (col) }
+                    }
+                }
+            }
+        }
+    };
+    page.into_string()
 }
-
 
 #[divan::bench]
 fn teams(bencher: divan::Bencher) {
@@ -62,29 +63,29 @@ fn teams(bencher: divan::Bencher) {
 }
 
 fn teams_render(teams: &Teams) -> String {
-    fhtml::format! {
-        <html>
-            <head>
-                <title>{teams.year}</title>
-            </head>
-            <body>
-                <h1>{fhtml::format_args!("CSL {teams.year}")}</h1>
-                <ul>
-        { teams.teams.iter()
-            .enumerate()
-            .map(|(idx, team)|  fhtml::format!{
-                <li class={match idx {
-                        0=>"champion",
-                        _=>""
-                }}><b>
-                 {&team.name} </b>":"
-                  {team.score}</li> }
-         ).collect::<Vec<String>>().join("\n")
+    let page = html! {
+        html {
+            head {
+                title { (teams.year) }
+            }
+            body {
+                h1 {
+                    "CSL "
+                    (teams.year)
+                }
+                ul {
+                    @for (idx, team) in teams.teams.iter().enumerate() {
+                        li.champion[idx == 0] {
+                            b { (&team.name) }
+                            ": "
+                            (team.score)
+                        }
+                    }
+                }
+            }
         }
-                </ul>
-            </body>
-        </html>
-    }
+    };
+    page.into_string()
 }
 
 struct Teams {
