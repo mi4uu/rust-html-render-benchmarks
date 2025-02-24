@@ -26,9 +26,10 @@ for FEATURE_NAME in "${FEATURES[@]}"; do
     # Run benchmarks with the current feature
     echo "Running cargo bench for $FEATURE_NAME..."
     cargo bench -Z unstable-options --timings=html --features "$FEATURE_NAME"
-
-    mv target/cargo-timings/cargo-timing.html "docs/cargo-timing-${FEATURE_NAME}.html"
-    echo "<hr><a href=\"cargo-timing-${FEATURE_NAME}.html\"" >> docs/list.html"
+    LINK='<hr><a href="cargo-timing-'
+    LINK2='.html">'
+    cat "./target/cargo-timings/cargo-timing.html" > "./docs/cargo-timing-$FEATURE_NAME.html"
+    echo "${LINK}${FEATURE_NAME}${LINK2}${FEATURE_NAME}</a>" >> "docs/list.html"
 
     # Check if the command succeeded
     if [ $? -eq 0 ]; then
