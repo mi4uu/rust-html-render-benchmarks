@@ -8,10 +8,10 @@ default = []
 hyped = ["dep:hyped"]
 maud = ["dep:maud"]
 askama = ["dep:askama"]
-tera = ["dep:tera"]
-tinytemplate = ["dep:tinytemplate"]
-handlebars = ["dep:handlebars"]
-minijinja = ["dep:minijinja"]
+tera = ["dep:tera","dep:lazy_static","dep:serde","dep:serde_json"]
+tinytemplate = ["dep:tinytemplate","dep:serde","dep:serde_json"]
+handlebars = ["dep:handlebars","dep:serde","dep:serde_json"]
+minijinja = ["dep:minijinja","dep:serde","dep:serde_json"]
 html_node = ["dep:html-node"]
 hypertext = ["dep:hypertext"]
 vy = ["dep:vy"]
@@ -23,11 +23,11 @@ divan = "0.1.8"
 maud = { version = "0.25.0", optional = true }
 askama = { version = "0.12.1", optional = true }
 tera = { version = "1.19.1", optional = true }
-serde = { version = "1.0.195", features = ["derive"] }
-lazy_static = "1.4.0"
+serde = { version = "1.0.195",  optional = true,features = ["derive"] }
+lazy_static = { version ="1.4.0" ,optional = true   }
 tinytemplate = { git = "https://github.com/johnbartholomew/TinyTemplate", branch = "sync", optional = true }
 handlebars = { version = "5.0.0", optional = true }
-serde_json = "1.0.111"
+serde_json =  { version ="1.0.111" , optional = true }
 minijinja = { version = "1.0.10", optional = true }
 html-node = { version = "0.5.0", optional = true }
 hypertext = { version = "0.3.0", optional = true }

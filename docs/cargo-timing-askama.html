@@ -169,7 +169,7 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 
 <table class="my-table summary-table">
   <tr>
-    <td>Targets:</td><td>ssr_template_benchmarks 0.1.0 (bin "ssr_template_benchmarks", bench "tinytemplate")</td>
+    <td>Targets:</td><td>ssr_template_benchmarks 0.1.0 (bin "ssr_template_benchmarks", bench "askama")</td>
   </tr>
   <tr>
     <td>Profile:</td><td>bench</td>
@@ -178,19 +178,19 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
     <td>Fresh units:</td><td>0</td>
   </tr>
   <tr>
-    <td>Dirty units:</td><td>38</td>
+    <td>Dirty units:</td><td>64</td>
   </tr>
   <tr>
-    <td>Total units:</td><td>38</td>
+    <td>Total units:</td><td>64</td>
   </tr>
   <tr>
     <td>Max concurrency:</td><td>2 (jobs=2 ncpu=2)</td>
   </tr>
   <tr>
-    <td>Build start:</td><td>2025-02-24T05:07:50Z</td>
+    <td>Build start:</td><td>2025-02-24T05:05:46Z</td>
   </tr>
   <tr>
-    <td>Total time:</td><td>22.0s</td>
+    <td>Total time:</td><td>28.0s</td>
   </tr>
   <tr>
     <td>rustc:</td><td>rustc 1.87.0-nightly (f8a913b13 2025-02-23)<br>Host: x86_64-unknown-linux-gnu<br>Target: x86_64-unknown-linux-gnu</td>
@@ -236,21 +236,13 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 <tr>
   <td>1.</td>
   <td>clap_builder v4.4.12</td>
-  <td>12.3s</td>
-  <td>10.1s (82%)</td>
+  <td>12.2s</td>
+  <td>10.2s (83%)</td>
   <td>env, help, std, wrap_help</td>
 </tr>
 
 <tr>
   <td>2.</td>
-  <td>divan v0.1.8</td>
-  <td>4.8s</td>
-  <td>4.0s (84%)</td>
-  <td>default, help, wrap_help</td>
-</tr>
-
-<tr>
-  <td>3.</td>
   <td>syn v2.0.48</td>
   <td>3.6s</td>
   <td>1.5s (43%)</td>
@@ -258,79 +250,135 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>4.</td>
+  <td>3.</td>
   <td>regex-lite v0.1.5</td>
-  <td>3.1s</td>
-  <td>2.5s (81%)</td>
+  <td>3.2s</td>
+  <td>2.5s (80%)</td>
   <td>std, string</td>
+</tr>
+
+<tr>
+  <td>4.</td>
+  <td>divan v0.1.8</td>
+  <td>3.2s</td>
+  <td>2.6s (82%)</td>
+  <td>default, help, wrap_help</td>
 </tr>
 
 <tr>
   <td>5.</td>
   <td>serde_json v1.0.111</td>
   <td>3.0s</td>
-  <td>2.1s (71%)</td>
+  <td>2.1s (69%)</td>
   <td>default, std</td>
 </tr>
 
 <tr>
   <td>6.</td>
-  <td>serde_derive v1.0.195</td>
-  <td>2.9s</td>
-  <td></td>
-  <td>default</td>
-</tr>
-
-<tr>
-  <td>7.</td>
   <td>serde v1.0.195</td>
-  <td>2.8s</td>
+  <td>2.9s</td>
   <td>0.1s (5%)</td>
   <td>default, derive, serde_derive, std</td>
 </tr>
 
 <tr>
-  <td>8.</td>
-  <td>tinytemplate v1.2.1</td>
-  <td>1.5s</td>
-  <td>1.3s (84%)</td>
+  <td>7.</td>
+  <td>serde_derive v1.0.195</td>
+  <td>2.8s</td>
   <td></td>
+  <td>default</td>
+</tr>
+
+<tr>
+  <td>8.</td>
+  <td>serde v1.0.195</td>
+  <td>2.4s</td>
+  <td>0.1s (3%)</td>
+  <td>default, derive, serde_derive, std</td>
 </tr>
 
 <tr>
   <td>9.</td>
-  <td>ssr_template_benchmarks v0.1.0 bench "tinytemplate" (test)</td>
-  <td>1.4s</td>
+  <td>askama_parser v0.2.0</td>
+  <td>2.0s</td>
+  <td>0.8s (39%)</td>
   <td></td>
-  <td>default, tinytemplate</td>
 </tr>
 
 <tr>
   <td>10.</td>
-  <td>rustix v0.38.28</td>
-  <td>1.2s</td>
-  <td>0.6s (48%)</td>
-  <td>alloc, default, std, termios, use-libc-auxv</td>
+  <td>nom v7.1.3</td>
+  <td>1.5s</td>
+  <td>0.1s (7%)</td>
+  <td>alloc</td>
 </tr>
 
 <tr>
   <td>11.</td>
-  <td>libc v0.2.151</td>
-  <td>0.6s</td>
-  <td>0.1s (10%)</td>
-  <td>default, std</td>
+  <td>askama_derive v0.12.4</td>
+  <td>1.5s</td>
+  <td></td>
+  <td>basic-toml, config, humansize, num-traits, serde, urlencode</td>
 </tr>
 
 <tr>
   <td>12.</td>
-  <td>proc-macro2 v1.0.75</td>
-  <td>0.6s</td>
-  <td>0.2s (35%)</td>
-  <td>default, proc-macro</td>
+  <td>libm v0.2.8</td>
+  <td>1.4s</td>
+  <td>0.9s (65%)</td>
+  <td>default</td>
 </tr>
 
 <tr>
   <td>13.</td>
+  <td>rustix v0.38.28</td>
+  <td>1.1s</td>
+  <td>0.5s (47%)</td>
+  <td>alloc, default, std, termios, use-libc-auxv</td>
+</tr>
+
+<tr>
+  <td>14.</td>
+  <td>ssr_template_benchmarks v0.1.0 bench "askama" (test)</td>
+  <td>0.9s</td>
+  <td></td>
+  <td>askama, default</td>
+</tr>
+
+<tr>
+  <td>15.</td>
+  <td>basic-toml v0.1.8</td>
+  <td>0.9s</td>
+  <td>0.4s (43%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>16.</td>
+  <td>num-traits v0.2.17</td>
+  <td>0.8s</td>
+  <td>0.2s (21%)</td>
+  <td>default, std</td>
+</tr>
+
+<tr>
+  <td>17.</td>
+  <td>memchr v2.7.1</td>
+  <td>0.6s</td>
+  <td>0.1s (25%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>18.</td>
+  <td>proc-macro2 v1.0.75</td>
+  <td>0.5s</td>
+  <td>0.2s (39%)</td>
+  <td>default, proc-macro</td>
+</tr>
+
+<tr>
+  <td>19.</td>
   <td>divan-macros v0.1.8</td>
   <td>0.5s</td>
   <td></td>
@@ -338,47 +386,111 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>14.</td>
+  <td>20.</td>
+  <td>libc v0.2.151</td>
+  <td>0.5s</td>
+  <td>0.0s (7%)</td>
+  <td>default, std</td>
+</tr>
+
+<tr>
+  <td>21.</td>
+  <td>mime_guess v2.0.4</td>
+  <td>0.4s</td>
+  <td>0.1s (20%)</td>
+  <td>default, rev-mappings</td>
+</tr>
+
+<tr>
+  <td>22.</td>
+  <td>autocfg v1.1.0</td>
+  <td>0.4s</td>
+  <td>0.2s (45%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>23.</td>
   <td>linux-raw-sys v0.4.12</td>
   <td>0.4s</td>
-  <td>0.0s (7%)</td>
+  <td>0.0s (8%)</td>
   <td>elf, errno, general, ioctl, no_std</td>
 </tr>
 
 <tr>
-  <td>15.</td>
+  <td>24.</td>
+  <td>mime_guess v2.0.4 build script</td>
+  <td>0.3s</td>
+  <td></td>
+  <td>default, rev-mappings</td>
+</tr>
+
+<tr>
+  <td>25.</td>
+  <td>bitflags v2.4.1</td>
+  <td>0.3s</td>
+  <td>0.2s (68%)</td>
+  <td>std</td>
+</tr>
+
+<tr>
+  <td>26.</td>
+  <td>num-traits v0.2.17 build script (run)</td>
+  <td>0.3s</td>
+  <td></td>
+  <td>default, std</td>
+</tr>
+
+<tr>
+  <td>27.</td>
   <td>clap_lex v0.6.0</td>
-  <td>0.4s</td>
+  <td>0.3s</td>
   <td>0.2s (63%)</td>
   <td></td>
 </tr>
 
 <tr>
-  <td>16.</td>
-  <td>bitflags v2.4.1</td>
+  <td>28.</td>
+  <td>version_check v0.9.4</td>
   <td>0.3s</td>
-  <td>0.2s (66%)</td>
-  <td>std</td>
-</tr>
-
-<tr>
-  <td>17.</td>
-  <td>ryu v1.0.19</td>
-  <td>0.3s</td>
-  <td>0.2s (67%)</td>
+  <td>0.1s (42%)</td>
   <td></td>
 </tr>
 
 <tr>
-  <td>18.</td>
+  <td>29.</td>
+  <td>ryu v1.0.19</td>
+  <td>0.3s</td>
+  <td>0.2s (65%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>30.</td>
+  <td>percent-encoding v2.3.1</td>
+  <td>0.2s</td>
+  <td>0.1s (64%)</td>
+  <td>alloc, default, std</td>
+</tr>
+
+<tr>
+  <td>31.</td>
+  <td>askama v0.12.1</td>
+  <td>0.2s</td>
+  <td>0.1s (36%)</td>
+  <td>config, default, dep_humansize, dep_num_traits, humansize, num-traits, percent-encoding, urlencode</td>
+</tr>
+
+<tr>
+  <td>32.</td>
   <td>quote v1.0.35</td>
   <td>0.2s</td>
-  <td>0.1s (38%)</td>
+  <td>0.1s (37%)</td>
   <td>default, proc-macro</td>
 </tr>
 
 <tr>
-  <td>19.</td>
+  <td>33.</td>
   <td>anstyle v1.0.4</td>
   <td>0.2s</td>
   <td>0.1s (37%)</td>
@@ -386,15 +498,15 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>20.</td>
-  <td>rustix v0.38.28 build script</td>
+  <td>34.</td>
+  <td>minimal-lexical v0.2.1</td>
   <td>0.2s</td>
+  <td>0.0s (15%)</td>
   <td></td>
-  <td>alloc, default, std, termios, use-libc-auxv</td>
 </tr>
 
 <tr>
-  <td>21.</td>
+  <td>35.</td>
   <td>libc v0.2.151 build script</td>
   <td>0.2s</td>
   <td></td>
@@ -402,23 +514,39 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>22.</td>
-  <td>itoa v1.0.10</td>
+  <td>36.</td>
+  <td>rustix v0.38.28 build script</td>
   <td>0.2s</td>
-  <td>0.0s (11%)</td>
+  <td></td>
+  <td>alloc, default, std, termios, use-libc-auxv</td>
+</tr>
+
+<tr>
+  <td>37.</td>
+  <td>unicase v2.7.0</td>
+  <td>0.2s</td>
+  <td>0.0s (13%)</td>
   <td></td>
 </tr>
 
 <tr>
-  <td>23.</td>
-  <td>proc-macro2 v1.0.75 build script</td>
+  <td>38.</td>
+  <td>mime v0.3.17</td>
   <td>0.2s</td>
+  <td>0.0s (25%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>39.</td>
+  <td>proc-macro2 v1.0.75 build script</td>
+  <td>0.1s</td>
   <td></td>
   <td>default, proc-macro</td>
 </tr>
 
 <tr>
-  <td>24.</td>
+  <td>40.</td>
   <td>serde v1.0.195 build script</td>
   <td>0.1s</td>
   <td></td>
@@ -426,23 +554,15 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>25.</td>
-  <td>terminal_size v0.3.0</td>
+  <td>41.</td>
+  <td>num-traits v0.2.17 build script</td>
   <td>0.1s</td>
-  <td>0.0s (34%)</td>
   <td></td>
+  <td>default, std</td>
 </tr>
 
 <tr>
-  <td>26.</td>
-  <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks"</td>
-  <td>0.1s</td>
-  <td></td>
-  <td>default, tinytemplate</td>
-</tr>
-
-<tr>
-  <td>27.</td>
+  <td>42.</td>
   <td>serde_json v1.0.111 build script</td>
   <td>0.1s</td>
   <td></td>
@@ -450,71 +570,135 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>28.</td>
+  <td>43.</td>
   <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks" (test)</td>
   <td>0.1s</td>
   <td></td>
-  <td>default, tinytemplate</td>
+  <td>askama, default</td>
 </tr>
 
 <tr>
-  <td>29.</td>
-  <td>cfg-if v1.0.0</td>
+  <td>44.</td>
+  <td>itoa v1.0.10</td>
   <td>0.1s</td>
-  <td>0.0s (40%)</td>
+  <td>0.0s (15%)</td>
   <td></td>
 </tr>
 
 <tr>
-  <td>30.</td>
-  <td>clap v4.4.13</td>
+  <td>45.</td>
+  <td>askama_escape v0.10.3</td>
   <td>0.1s</td>
-  <td>0.0s (54%)</td>
-  <td>env, help, std, wrap_help</td>
+  <td>0.0s (30%)</td>
+  <td></td>
 </tr>
 
 <tr>
-  <td>31.</td>
-  <td>proc-macro2 v1.0.75 build script (run)</td>
+  <td>46.</td>
+  <td>humansize v2.1.3</td>
   <td>0.1s</td>
+  <td>0.0s (24%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>47.</td>
+  <td>ssr_template_benchmarks v0.1.0 bin "ssr_template_benchmarks"</td>
+  <td>0.1s</td>
+  <td></td>
+  <td>askama, default</td>
+</tr>
+
+<tr>
+  <td>48.</td>
+  <td>libm v0.2.8 build script</td>
+  <td>0.1s</td>
+  <td></td>
+  <td>default</td>
+</tr>
+
+<tr>
+  <td>49.</td>
+  <td>unicase v2.7.0 build script</td>
+  <td>0.1s</td>
+  <td></td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>50.</td>
+  <td>terminal_size v0.3.0</td>
+  <td>0.1s</td>
+  <td>0.0s (44%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>51.</td>
+  <td>unicode-ident v1.0.12</td>
+  <td>0.1s</td>
+  <td>0.0s (31%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>52.</td>
+  <td>condtype v1.3.0</td>
+  <td>0.1s</td>
+  <td>0.0s (45%)</td>
+  <td></td>
+</tr>
+
+<tr>
+  <td>53.</td>
+  <td>rustix v0.38.28 build script (run)</td>
+  <td>0.1s</td>
+  <td></td>
+  <td>alloc, default, std, termios, use-libc-auxv</td>
+</tr>
+
+<tr>
+  <td>54.</td>
+  <td>proc-macro2 v1.0.75 build script (run)</td>
+  <td>0.0s</td>
   <td></td>
   <td>default, proc-macro</td>
 </tr>
 
 <tr>
-  <td>32.</td>
-  <td>unicode-ident v1.0.12</td>
-  <td>0.1s</td>
-  <td>0.0s (22%)</td>
-  <td></td>
-</tr>
-
-<tr>
-  <td>33.</td>
-  <td>condtype v1.3.0</td>
+  <td>55.</td>
+  <td>lazy_static v1.4.0</td>
   <td>0.0s</td>
   <td>0.0s (35%)</td>
   <td></td>
 </tr>
 
 <tr>
-  <td>34.</td>
-  <td>lazy_static v1.4.0</td>
+  <td>56.</td>
+  <td>unicase v2.7.0 build script (run)</td>
   <td>0.0s</td>
-  <td>0.0s (27%)</td>
+  <td></td>
   <td></td>
 </tr>
 
 <tr>
-  <td>35.</td>
-  <td>rustix v0.38.28 build script (run)</td>
+  <td>57.</td>
+  <td>cfg-if v1.0.0</td>
   <td>0.0s</td>
+  <td>0.0s (41%)</td>
   <td></td>
-  <td>alloc, default, std, termios, use-libc-auxv</td>
 </tr>
 
 <tr>
-  <td>36.</td>
+  <td>58.</td>
+  <td>clap v4.4.13</td>
+  <td>0.0s</td>
+  <td>0.0s (37%)</td>
+  <td>env, help, std, wrap_help</td>
+</tr>
+
+<tr>
+  <td>59.</td>
   <td>libc v0.2.151 build script (run)</td>
   <td>0.0s</td>
   <td></td>
@@ -522,7 +706,7 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>37.</td>
+  <td>60.</td>
   <td>serde v1.0.195 build script (run)</td>
   <td>0.0s</td>
   <td></td>
@@ -530,16 +714,40 @@ See <a href="https://doc.rust-lang.org/nightly/cargo/reference/timings.html">Doc
 </tr>
 
 <tr>
-  <td>38.</td>
+  <td>61.</td>
+  <td>serde v1.0.195 build script (run)</td>
+  <td>0.0s</td>
+  <td></td>
+  <td>default, derive, serde_derive, std</td>
+</tr>
+
+<tr>
+  <td>62.</td>
+  <td>mime_guess v2.0.4 build script (run)</td>
+  <td>0.0s</td>
+  <td></td>
+  <td>default, rev-mappings</td>
+</tr>
+
+<tr>
+  <td>63.</td>
   <td>serde_json v1.0.111 build script (run)</td>
   <td>0.0s</td>
   <td></td>
   <td>default, std</td>
 </tr>
+
+<tr>
+  <td>64.</td>
+  <td>libm v0.2.8 build script (run)</td>
+  <td>0.0s</td>
+  <td></td>
+  <td>default</td>
+</tr>
 </tbody>
 </table>
 <script>
-DURATION = 22;
+DURATION = 28;
 const UNIT_DATA = [
   {
     "i": 0,
@@ -547,8 +755,8 @@ const UNIT_DATA = [
     "version": "1.0.75",
     "mode": "todo",
     "target": " build script",
-    "start": 0.07,
-    "duration": 0.16,
+    "start": 0.08,
+    "duration": 0.14,
     "rmeta_time": null,
     "unlocked_units": [
       3
@@ -561,23 +769,24 @@ const UNIT_DATA = [
     "version": "1.0.12",
     "mode": "todo",
     "target": "",
-    "start": 0.07,
-    "duration": 0.06,
+    "start": 0.08,
+    "duration": 0.07,
     "rmeta_time": 0.05,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 2,
-    "name": "rustix",
-    "version": "0.38.28",
+    "name": "serde",
+    "version": "1.0.195",
     "mode": "todo",
     "target": " build script",
-    "start": 0.13,
-    "duration": 0.19,
+    "start": 0.15,
+    "duration": 0.12,
     "rmeta_time": null,
     "unlocked_units": [
-      5
+      17,
+      40
     ],
     "unlocked_rmeta_units": []
   },
@@ -587,50 +796,54 @@ const UNIT_DATA = [
     "version": "1.0.75",
     "mode": "run-custom-build",
     "target": " build script (run)",
-    "start": 0.23,
-    "duration": 0.06,
+    "start": 0.22,
+    "duration": 0.05,
     "rmeta_time": null,
     "unlocked_units": [
-      4
+      5
     ],
     "unlocked_rmeta_units": []
   },
   {
     "i": 4,
+    "name": "version_check",
+    "version": "0.9.4",
+    "mode": "todo",
+    "target": "",
+    "start": 0.27,
+    "duration": 0.27,
+    "rmeta_time": 0.16,
+    "unlocked_units": [
+      6
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 5,
     "name": "proc-macro2",
     "version": "1.0.75",
     "mode": "todo",
     "target": "",
-    "start": 0.29,
-    "duration": 0.57,
-    "rmeta_time": 0.37,
+    "start": 0.27,
+    "duration": 0.54,
+    "rmeta_time": 0.33,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
       7
     ]
   },
   {
-    "i": 5,
-    "name": "rustix",
-    "version": "0.38.28",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 0.32,
-    "duration": 0.04,
-    "rmeta_time": null,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
     "i": 6,
-    "name": "linux-raw-sys",
-    "version": "0.4.12",
+    "name": "unicase",
+    "version": "2.7.0",
     "mode": "todo",
-    "target": "",
-    "start": 0.36,
-    "duration": 0.43,
-    "rmeta_time": 0.4,
-    "unlocked_units": [],
+    "target": " build script",
+    "start": 0.54,
+    "duration": 0.08,
+    "rmeta_time": null,
+    "unlocked_units": [
+      9
+    ],
     "unlocked_rmeta_units": []
   },
   {
@@ -639,40 +852,40 @@ const UNIT_DATA = [
     "version": "1.0.35",
     "mode": "todo",
     "target": "",
-    "start": 0.79,
-    "duration": 0.23,
-    "rmeta_time": 0.14,
+    "start": 0.62,
+    "duration": 0.21,
+    "rmeta_time": 0.13,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
-      9
+      8
     ]
   },
   {
     "i": 8,
-    "name": "bitflags",
-    "version": "2.4.1",
-    "mode": "todo",
-    "target": "",
-    "start": 0.86,
-    "duration": 0.34,
-    "rmeta_time": 0.12,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      10
-    ]
-  },
-  {
-    "i": 9,
     "name": "syn",
     "version": "2.0.48",
     "mode": "todo",
     "target": "",
-    "start": 1.02,
-    "duration": 3.61,
-    "rmeta_time": 2.07,
+    "start": 0.81,
+    "duration": 3.58,
+    "rmeta_time": 2.04,
     "unlocked_units": [
-      20,
-      27
+      49,
+      22
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 9,
+    "name": "unicase",
+    "version": "2.7.0",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 0.83,
+    "duration": 0.04,
+    "rmeta_time": null,
+    "unlocked_units": [
+      12
     ],
     "unlocked_rmeta_units": []
   },
@@ -681,358 +894,700 @@ const UNIT_DATA = [
     "name": "rustix",
     "version": "0.38.28",
     "mode": "todo",
-    "target": "",
-    "start": 1.2,
-    "duration": 1.17,
-    "rmeta_time": 0.61,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      13
-    ]
-  },
-  {
-    "i": 11,
-    "name": "serde",
-    "version": "1.0.195",
-    "mode": "todo",
     "target": " build script",
-    "start": 2.37,
-    "duration": 0.13,
+    "start": 0.88,
+    "duration": 0.18,
     "rmeta_time": null,
     "unlocked_units": [
-      12
+      11
     ],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 12,
-    "name": "serde",
-    "version": "1.0.195",
+    "i": 11,
+    "name": "rustix",
+    "version": "0.38.28",
     "mode": "run-custom-build",
     "target": " build script (run)",
-    "start": 2.5,
-    "duration": 0.02,
+    "start": 1.06,
+    "duration": 0.05,
     "rmeta_time": null,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 13,
-    "name": "terminal_size",
-    "version": "0.3.0",
+    "i": 12,
+    "name": "unicase",
+    "version": "2.7.0",
     "mode": "todo",
     "target": "",
-    "start": 2.52,
-    "duration": 0.1,
-    "rmeta_time": 0.06,
+    "start": 1.11,
+    "duration": 0.17,
+    "rmeta_time": 0.14,
+    "unlocked_units": [
+      16
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 13,
+    "name": "bitflags",
+    "version": "2.4.1",
+    "mode": "todo",
+    "target": "",
+    "start": 1.28,
+    "duration": 0.34,
+    "rmeta_time": 0.11,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 14,
-    "name": "clap_lex",
-    "version": "0.6.0",
+    "name": "linux-raw-sys",
+    "version": "0.4.12",
     "mode": "todo",
     "target": "",
-    "start": 2.62,
-    "duration": 0.35,
-    "rmeta_time": 0.13,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 15,
-    "name": "serde_json",
-    "version": "1.0.111",
-    "mode": "todo",
-    "target": " build script",
-    "start": 2.97,
-    "duration": 0.08,
-    "rmeta_time": null,
-    "unlocked_units": [
-      22
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 16,
-    "name": "anstyle",
-    "version": "1.0.4",
-    "mode": "todo",
-    "target": "",
-    "start": 3.06,
-    "duration": 0.21,
-    "rmeta_time": 0.13,
+    "start": 1.62,
+    "duration": 0.36,
+    "rmeta_time": 0.33,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
-      19
+      15
     ]
   },
   {
-    "i": 17,
-    "name": "libc",
-    "version": "0.2.151",
+    "i": 15,
+    "name": "rustix",
+    "version": "0.38.28",
+    "mode": "todo",
+    "target": "",
+    "start": 1.99,
+    "duration": 1.14,
+    "rmeta_time": 0.61,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      27
+    ]
+  },
+  {
+    "i": 16,
+    "name": "mime_guess",
+    "version": "2.0.4",
     "mode": "todo",
     "target": " build script",
-    "start": 3.26,
-    "duration": 0.18,
+    "start": 3.12,
+    "duration": 0.34,
     "rmeta_time": null,
     "unlocked_units": [
-      18
+      26
     ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 17,
+    "name": "serde",
+    "version": "1.0.195",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 3.47,
+    "duration": 0.01,
+    "rmeta_time": null,
+    "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
     "i": 18,
-    "name": "libc",
-    "version": "0.2.151",
-    "mode": "run-custom-build",
-    "target": " build script (run)",
-    "start": 3.44,
-    "duration": 0.02,
+    "name": "libm",
+    "version": "0.2.8",
+    "mode": "todo",
+    "target": " build script",
+    "start": 3.48,
+    "duration": 0.08,
     "rmeta_time": null,
     "unlocked_units": [
-      28
+      25
     ],
     "unlocked_rmeta_units": []
   },
   {
     "i": 19,
-    "name": "clap_builder",
-    "version": "4.4.12",
+    "name": "minimal-lexical",
+    "version": "0.2.1",
     "mode": "todo",
     "target": "",
-    "start": 3.46,
-    "duration": 12.25,
-    "rmeta_time": 2.16,
+    "start": 3.57,
+    "duration": 0.19,
+    "rmeta_time": 0.16,
     "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      26
-    ]
+    "unlocked_rmeta_units": []
   },
   {
     "i": 20,
-    "name": "serde_derive",
-    "version": "1.0.195",
+    "name": "autocfg",
+    "version": "1.1.0",
     "mode": "todo",
     "target": "",
-    "start": 4.63,
-    "duration": 2.86,
-    "rmeta_time": null,
+    "start": 3.76,
+    "duration": 0.38,
+    "rmeta_time": 0.21,
     "unlocked_units": [
-      21
+      24
     ],
     "unlocked_rmeta_units": []
   },
   {
     "i": 21,
-    "name": "serde",
-    "version": "1.0.195",
+    "name": "memchr",
+    "version": "2.7.1",
     "mode": "todo",
     "target": "",
-    "start": 7.49,
-    "duration": 2.84,
-    "rmeta_time": 2.7,
+    "start": 4.15,
+    "duration": 0.59,
+    "rmeta_time": 0.44,
     "unlocked_units": [],
-    "unlocked_rmeta_units": []
+    "unlocked_rmeta_units": [
+      23
+    ]
   },
   {
     "i": 22,
-    "name": "serde_json",
-    "version": "1.0.111",
+    "name": "serde_derive",
+    "version": "1.0.195",
+    "mode": "todo",
+    "target": "",
+    "start": 4.39,
+    "duration": 2.83,
+    "rmeta_time": null,
+    "unlocked_units": [
+      32
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 23,
+    "name": "nom",
+    "version": "7.1.3",
+    "mode": "todo",
+    "target": "",
+    "start": 4.73,
+    "duration": 1.52,
+    "rmeta_time": 1.42,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      39
+    ]
+  },
+  {
+    "i": 24,
+    "name": "num-traits",
+    "version": "0.2.17",
+    "mode": "todo",
+    "target": " build script",
+    "start": 6.26,
+    "duration": 0.12,
+    "rmeta_time": null,
+    "unlocked_units": [
+      38
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 25,
+    "name": "libm",
+    "version": "0.2.8",
     "mode": "run-custom-build",
     "target": " build script (run)",
-    "start": 10.33,
+    "start": 6.38,
     "duration": 0.0,
+    "rmeta_time": null,
+    "unlocked_units": [
+      37
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 26,
+    "name": "mime_guess",
+    "version": "2.0.4",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 6.38,
+    "duration": 0.01,
     "rmeta_time": null,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 23,
-    "name": "ryu",
-    "version": "1.0.19",
+    "i": 27,
+    "name": "terminal_size",
+    "version": "0.3.0",
     "mode": "todo",
     "target": "",
-    "start": 10.33,
-    "duration": 0.28,
-    "rmeta_time": 0.09,
+    "start": 6.39,
+    "duration": 0.08,
+    "rmeta_time": 0.04,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 24,
-    "name": "itoa",
-    "version": "1.0.10",
+    "i": 28,
+    "name": "anstyle",
+    "version": "1.0.4",
     "mode": "todo",
     "target": "",
-    "start": 10.61,
-    "duration": 0.17,
-    "rmeta_time": 0.15,
+    "start": 6.47,
+    "duration": 0.2,
+    "rmeta_time": 0.13,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 29,
+    "name": "mime",
+    "version": "0.3.17",
+    "mode": "todo",
+    "target": "",
+    "start": 6.67,
+    "duration": 0.16,
+    "rmeta_time": 0.12,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
-      25
+      36
     ]
   },
   {
-    "i": 25,
-    "name": "serde_json",
-    "version": "1.0.111",
+    "i": 30,
+    "name": "libc",
+    "version": "0.2.151",
+    "mode": "todo",
+    "target": " build script",
+    "start": 6.84,
+    "duration": 0.18,
+    "rmeta_time": null,
+    "unlocked_units": [
+      35
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 31,
+    "name": "clap_lex",
+    "version": "0.6.0",
     "mode": "todo",
     "target": "",
-    "start": 10.78,
-    "duration": 2.96,
-    "rmeta_time": 0.85,
+    "start": 7.02,
+    "duration": 0.3,
+    "rmeta_time": 0.11,
     "unlocked_units": [],
     "unlocked_rmeta_units": [
       33
     ]
   },
   {
-    "i": 26,
-    "name": "clap",
-    "version": "4.4.13",
+    "i": 32,
+    "name": "serde",
+    "version": "1.0.195",
     "mode": "todo",
     "target": "",
-    "start": 13.73,
-    "duration": 0.07,
-    "rmeta_time": 0.03,
+    "start": 7.22,
+    "duration": 2.41,
+    "rmeta_time": 2.33,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      34
+    ]
+  },
+  {
+    "i": 33,
+    "name": "clap_builder",
+    "version": "4.4.12",
+    "mode": "todo",
+    "target": "",
+    "start": 7.32,
+    "duration": 12.18,
+    "rmeta_time": 2.03,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      48
+    ]
+  },
+  {
+    "i": 34,
+    "name": "basic-toml",
+    "version": "0.1.8",
+    "mode": "todo",
+    "target": "",
+    "start": 9.64,
+    "duration": 0.9,
+    "rmeta_time": 0.51,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 27,
-    "name": "divan-macros",
-    "version": "0.1.8",
+    "i": 35,
+    "name": "libc",
+    "version": "0.2.151",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 10.54,
+    "duration": 0.02,
+    "rmeta_time": null,
+    "unlocked_units": [
+      47
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 36,
+    "name": "mime_guess",
+    "version": "2.0.4",
     "mode": "todo",
     "target": "",
-    "start": 13.8,
-    "duration": 0.52,
+    "start": 10.57,
+    "duration": 0.39,
+    "rmeta_time": 0.31,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 37,
+    "name": "libm",
+    "version": "0.2.8",
+    "mode": "todo",
+    "target": "",
+    "start": 10.96,
+    "duration": 1.41,
+    "rmeta_time": 0.49,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      46
+    ]
+  },
+  {
+    "i": 38,
+    "name": "num-traits",
+    "version": "0.2.17",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 12.37,
+    "duration": 0.31,
+    "rmeta_time": null,
+    "unlocked_units": [
+      45
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 39,
+    "name": "askama_parser",
+    "version": "0.2.0",
+    "mode": "todo",
+    "target": "",
+    "start": 12.68,
+    "duration": 2.03,
+    "rmeta_time": 1.23,
+    "unlocked_units": [
+      44
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 40,
+    "name": "serde",
+    "version": "1.0.195",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 14.71,
+    "duration": 0.02,
+    "rmeta_time": null,
+    "unlocked_units": [
+      43
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 41,
+    "name": "serde_json",
+    "version": "1.0.111",
+    "mode": "todo",
+    "target": " build script",
+    "start": 14.72,
+    "duration": 0.09,
+    "rmeta_time": null,
+    "unlocked_units": [
+      42
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 42,
+    "name": "serde_json",
+    "version": "1.0.111",
+    "mode": "run-custom-build",
+    "target": " build script (run)",
+    "start": 14.82,
+    "duration": 0.0,
     "rmeta_time": null,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 28,
+    "i": 43,
+    "name": "serde",
+    "version": "1.0.195",
+    "mode": "todo",
+    "target": "",
+    "start": 14.82,
+    "duration": 2.89,
+    "rmeta_time": 2.74,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 44,
+    "name": "askama_derive",
+    "version": "0.12.4",
+    "mode": "todo",
+    "target": "",
+    "start": 17.71,
+    "duration": 1.46,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 45,
+    "name": "num-traits",
+    "version": "0.2.17",
+    "mode": "todo",
+    "target": "",
+    "start": 19.17,
+    "duration": 0.81,
+    "rmeta_time": 0.64,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 46,
+    "name": "humansize",
+    "version": "2.1.3",
+    "mode": "todo",
+    "target": "",
+    "start": 19.5,
+    "duration": 0.08,
+    "rmeta_time": 0.06,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 47,
     "name": "libc",
     "version": "0.2.151",
     "mode": "todo",
     "target": "",
-    "start": 14.32,
-    "duration": 0.58,
-    "rmeta_time": 0.53,
+    "start": 19.58,
+    "duration": 0.51,
+    "rmeta_time": 0.47,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 29,
-    "name": "regex-lite",
-    "version": "0.1.5",
+    "i": 48,
+    "name": "clap",
+    "version": "4.4.13",
     "mode": "todo",
     "target": "",
-    "start": 14.91,
-    "duration": 3.11,
-    "rmeta_time": 0.59,
+    "start": 19.98,
+    "duration": 0.03,
+    "rmeta_time": 0.02,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 30,
+    "i": 49,
+    "name": "divan-macros",
+    "version": "0.1.8",
+    "mode": "todo",
+    "target": "",
+    "start": 20.02,
+    "duration": 0.51,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 50,
+    "name": "ryu",
+    "version": "1.0.19",
+    "mode": "todo",
+    "target": "",
+    "start": 20.09,
+    "duration": 0.26,
+    "rmeta_time": 0.09,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 51,
+    "name": "percent-encoding",
+    "version": "2.3.1",
+    "mode": "todo",
+    "target": "",
+    "start": 20.35,
+    "duration": 0.22,
+    "rmeta_time": 0.08,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 52,
+    "name": "itoa",
+    "version": "1.0.10",
+    "mode": "todo",
+    "target": "",
+    "start": 20.53,
+    "duration": 0.09,
+    "rmeta_time": 0.08,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      58
+    ]
+  },
+  {
+    "i": 53,
+    "name": "cfg-if",
+    "version": "1.0.0",
+    "mode": "todo",
+    "target": "",
+    "start": 20.57,
+    "duration": 0.03,
+    "rmeta_time": 0.02,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 54,
+    "name": "askama_escape",
+    "version": "0.10.3",
+    "mode": "todo",
+    "target": "",
+    "start": 20.6,
+    "duration": 0.09,
+    "rmeta_time": 0.06,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      57
+    ]
+  },
+  {
+    "i": 55,
     "name": "condtype",
     "version": "1.3.0",
     "mode": "todo",
     "target": "",
-    "start": 15.71,
+    "start": 20.62,
+    "duration": 0.06,
+    "rmeta_time": 0.03,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 56,
+    "name": "regex-lite",
+    "version": "0.1.5",
+    "mode": "todo",
+    "target": "",
+    "start": 20.68,
+    "duration": 3.17,
+    "rmeta_time": 0.65,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": [
+      59
+    ]
+  },
+  {
+    "i": 57,
+    "name": "askama",
+    "version": "0.12.1",
+    "mode": "todo",
+    "target": "",
+    "start": 20.69,
+    "duration": 0.21,
+    "rmeta_time": 0.14,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 58,
+    "name": "serde_json",
+    "version": "1.0.111",
+    "mode": "todo",
+    "target": "",
+    "start": 20.9,
+    "duration": 3.05,
+    "rmeta_time": 0.95,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 59,
+    "name": "divan",
+    "version": "0.1.8",
+    "mode": "todo",
+    "target": "",
+    "start": 23.86,
+    "duration": 3.16,
+    "rmeta_time": 0.57,
+    "unlocked_units": [
+      63,
+      61,
+      62
+    ],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 60,
+    "name": "lazy_static",
+    "version": "1.4.0",
+    "mode": "todo",
+    "target": "",
+    "start": 23.95,
     "duration": 0.05,
     "rmeta_time": 0.03,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 31,
-    "name": "cfg-if",
-    "version": "1.0.0",
-    "mode": "todo",
-    "target": "",
-    "start": 15.76,
-    "duration": 0.07,
-    "rmeta_time": 0.04,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": [
-      32
-    ]
-  },
-  {
-    "i": 32,
-    "name": "divan",
-    "version": "0.1.8",
-    "mode": "todo",
-    "target": "",
-    "start": 15.83,
-    "duration": 4.79,
-    "rmeta_time": 0.77,
-    "unlocked_units": [
-      35,
-      36,
-      37
-    ],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 33,
-    "name": "tinytemplate",
-    "version": "1.2.1",
-    "mode": "todo",
-    "target": "",
-    "start": 18.02,
-    "duration": 1.55,
-    "rmeta_time": 0.25,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 34,
-    "name": "lazy_static",
-    "version": "1.4.0",
-    "mode": "todo",
-    "target": "",
-    "start": 19.57,
-    "duration": 0.04,
-    "rmeta_time": 0.03,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 35,
+    "i": 61,
     "name": "ssr_template_benchmarks",
     "version": "0.1.0",
     "mode": "todo",
-    "target": " bin \"ssr_template_benchmarks\" (test)",
-    "start": 20.62,
+    "target": " bench \"askama\" (test)",
+    "start": 27.02,
+    "duration": 0.94,
+    "rmeta_time": null,
+    "unlocked_units": [],
+    "unlocked_rmeta_units": []
+  },
+  {
+    "i": 62,
+    "name": "ssr_template_benchmarks",
+    "version": "0.1.0",
+    "mode": "todo",
+    "target": " bin \"ssr_template_benchmarks\"",
+    "start": 27.02,
     "duration": 0.08,
     "rmeta_time": null,
     "unlocked_units": [],
     "unlocked_rmeta_units": []
   },
   {
-    "i": 36,
+    "i": 63,
     "name": "ssr_template_benchmarks",
     "version": "0.1.0",
     "mode": "todo",
-    "target": " bench \"tinytemplate\" (test)",
-    "start": 20.62,
-    "duration": 1.37,
-    "rmeta_time": null,
-    "unlocked_units": [],
-    "unlocked_rmeta_units": []
-  },
-  {
-    "i": 37,
-    "name": "ssr_template_benchmarks",
-    "version": "0.1.0",
-    "mode": "todo",
-    "target": " bin \"ssr_template_benchmarks\"",
-    "start": 20.7,
+    "target": " bin \"ssr_template_benchmarks\" (test)",
+    "start": 27.1,
     "duration": 0.09,
     "rmeta_time": null,
     "unlocked_units": [],
@@ -1041,985 +1596,1549 @@ const UNIT_DATA = [
 ];
 const CONCURRENCY_DATA = [
   {
-    "t": 0.071289407,
+    "t": 0.077374501,
     "active": 1,
-    "waiting": 15,
+    "waiting": 23,
+    "inactive": 40
+  },
+  {
+    "t": 0.077451267,
+    "active": 1,
+    "waiting": 23,
+    "inactive": 40
+  },
+  {
+    "t": 0.077518029,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 40
+  },
+  {
+    "t": 0.077581618,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 40
+  },
+  {
+    "t": 0.124661754,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 40
+  },
+  {
+    "t": 0.146419932,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 40
+  },
+  {
+    "t": 0.146615579,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 40
+  },
+  {
+    "t": 0.219276659,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 39
+  },
+  {
+    "t": 0.219442373,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 39
+  },
+  {
+    "t": 0.269166982,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 36
+  },
+  {
+    "t": 0.269239693,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 36
+  },
+  {
+    "t": 0.269285354,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 36
+  },
+  {
+    "t": 0.426078803,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 36
+  },
+  {
+    "t": 0.539992224,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 35
+  },
+  {
+    "t": 0.540197794,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 35
+  },
+  {
+    "t": 0.598231453,
+    "active": 2,
+    "waiting": 23,
+    "inactive": 34
+  },
+  {
+    "t": 0.621157128,
+    "active": 2,
+    "waiting": 23,
+    "inactive": 33
+  },
+  {
+    "t": 0.621258056,
+    "active": 2,
+    "waiting": 23,
+    "inactive": 33
+  },
+  {
+    "t": 0.754261748,
+    "active": 2,
+    "waiting": 24,
+    "inactive": 32
+  },
+  {
+    "t": 0.807243312,
+    "active": 2,
+    "waiting": 23,
+    "inactive": 32
+  },
+  {
+    "t": 0.807333808,
+    "active": 2,
+    "waiting": 23,
+    "inactive": 32
+  },
+  {
+    "t": 0.832000754,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 32
+  },
+  {
+    "t": 0.83223177,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 32
+  },
+  {
+    "t": 0.877121305,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 31
+  },
+  {
+    "t": 0.877394614,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 31
+  },
+  {
+    "t": 1.055244761,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 30
+  },
+  {
+    "t": 1.055491784,
+    "active": 2,
+    "waiting": 22,
+    "inactive": 30
+  },
+  {
+    "t": 1.10844456,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 30
+  },
+  {
+    "t": 1.114567178,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 30
+  },
+  {
+    "t": 1.257826611,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 30
+  },
+  {
+    "t": 1.2797699470000001,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 29
+  },
+  {
+    "t": 1.279914633,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 29
+  },
+  {
+    "t": 1.390386513,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 29
+  },
+  {
+    "t": 1.623730051,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 29
+  },
+  {
+    "t": 1.623986272,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 29
+  },
+  {
+    "t": 1.958655413,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 28
+  },
+  {
+    "t": 1.987949813,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 28
+  },
+  {
+    "t": 1.988179843,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 28
+  },
+  {
+    "t": 2.489008305,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 28
+  },
+  {
+    "t": 2.594597199,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 27
+  },
+  {
+    "t": 2.850591546,
+    "active": 2,
+    "waiting": 21,
+    "inactive": 27
+  },
+  {
+    "t": 3.1243866909999998,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 27
+  },
+  {
+    "t": 3.12459644,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 27
+  },
+  {
+    "t": 3.468747007,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 26
+  },
+  {
+    "t": 3.468925945,
+    "active": 2,
+    "waiting": 20,
+    "inactive": 26
+  },
+  {
+    "t": 3.483624794,
+    "active": 2,
+    "waiting": 19,
+    "inactive": 26
+  },
+  {
+    "t": 3.4837098969999998,
+    "active": 2,
+    "waiting": 19,
+    "inactive": 26
+  },
+  {
+    "t": 3.564997469,
+    "active": 2,
+    "waiting": 19,
+    "inactive": 25
+  },
+  {
+    "t": 3.565078334,
+    "active": 2,
+    "waiting": 19,
+    "inactive": 25
+  },
+  {
+    "t": 3.728780804,
+    "active": 2,
+    "waiting": 19,
+    "inactive": 25
+  },
+  {
+    "t": 3.7589190070000003,
+    "active": 2,
+    "waiting": 18,
+    "inactive": 25
+  },
+  {
+    "t": 3.759030363,
+    "active": 2,
+    "waiting": 18,
+    "inactive": 25
+  },
+  {
+    "t": 3.97124857,
+    "active": 2,
+    "waiting": 18,
+    "inactive": 25
+  },
+  {
+    "t": 4.143540683,
+    "active": 2,
+    "waiting": 18,
+    "inactive": 24
+  },
+  {
+    "t": 4.147671655,
+    "active": 2,
+    "waiting": 18,
+    "inactive": 24
+  },
+  {
+    "t": 4.390863653,
+    "active": 2,
+    "waiting": 19,
     "inactive": 22
   },
   {
-    "t": 0.071371607,
+    "t": 4.391095705,
     "active": 2,
-    "waiting": 14,
+    "waiting": 19,
     "inactive": 22
   },
   {
-    "t": 0.071457451,
+    "t": 4.584286673,
     "active": 2,
-    "waiting": 14,
-    "inactive": 22
-  },
-  {
-    "t": 0.072335398,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 22
-  },
-  {
-    "t": 0.119169137,
-    "active": 2,
-    "waiting": 14,
-    "inactive": 22
-  },
-  {
-    "t": 0.132453452,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 22
-  },
-  {
-    "t": 0.132584876,
-    "active": 2,
-    "waiting": 13,
-    "inactive": 22
-  },
-  {
-    "t": 0.227027426,
-    "active": 2,
-    "waiting": 13,
+    "waiting": 20,
     "inactive": 21
   },
   {
-    "t": 0.227335103,
+    "t": 4.73302312,
     "active": 2,
-    "waiting": 13,
+    "waiting": 19,
     "inactive": 21
   },
   {
-    "t": 0.290298225,
+    "t": 4.733246438,
     "active": 2,
-    "waiting": 13,
+    "waiting": 19,
+    "inactive": 21
+  },
+  {
+    "t": 5.233335534,
+    "active": 2,
+    "waiting": 19,
+    "inactive": 21
+  },
+  {
+    "t": 5.733528629,
+    "active": 2,
+    "waiting": 19,
+    "inactive": 21
+  },
+  {
+    "t": 6.155772369,
+    "active": 2,
+    "waiting": 20,
     "inactive": 20
   },
   {
-    "t": 0.290393692,
+    "t": 6.255726054,
     "active": 2,
-    "waiting": 13,
+    "waiting": 19,
     "inactive": 20
   },
   {
-    "t": 0.318987725,
+    "t": 6.259281308,
     "active": 2,
-    "waiting": 13,
+    "waiting": 19,
+    "inactive": 20
+  },
+  {
+    "t": 6.375316411,
+    "active": 2,
+    "waiting": 19,
     "inactive": 19
   },
   {
-    "t": 0.319204303,
+    "t": 6.375650955,
     "active": 2,
-    "waiting": 13,
+    "waiting": 19,
     "inactive": 19
   },
   {
-    "t": 0.35926033,
+    "t": 6.378505757,
     "active": 2,
-    "waiting": 12,
-    "inactive": 19
-  },
-  {
-    "t": 0.359529641,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 19
-  },
-  {
-    "t": 0.658871871,
-    "active": 2,
-    "waiting": 13,
+    "waiting": 19,
     "inactive": 18
   },
   {
-    "t": 0.756464648,
+    "t": 6.378716081,
     "active": 2,
-    "waiting": 13,
+    "waiting": 19,
     "inactive": 18
   },
   {
-    "t": 0.786903079,
+    "t": 6.391536711,
     "active": 2,
-    "waiting": 12,
+    "waiting": 18,
     "inactive": 18
   },
   {
-    "t": 0.787098256,
+    "t": 6.391676539,
     "active": 2,
-    "waiting": 12,
+    "waiting": 18,
     "inactive": 18
   },
   {
-    "t": 0.86169754,
+    "t": 6.435042128,
     "active": 2,
-    "waiting": 11,
+    "waiting": 18,
     "inactive": 18
   },
   {
-    "t": 0.86202931,
+    "t": 6.469249671,
     "active": 2,
-    "waiting": 11,
+    "waiting": 17,
     "inactive": 18
   },
   {
-    "t": 0.930961705,
+    "t": 6.469339518,
     "active": 2,
-    "waiting": 12,
+    "waiting": 17,
+    "inactive": 18
+  },
+  {
+    "t": 6.597191578,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 18
+  },
+  {
+    "t": 6.671684405,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 18
+  },
+  {
+    "t": 6.67176001,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 18
+  },
+  {
+    "t": 6.7950681809999995,
+    "active": 2,
+    "waiting": 17,
     "inactive": 17
   },
   {
-    "t": 0.978923748,
+    "t": 6.835990876,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 17
+  },
+  {
+    "t": 6.836080823,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 17
+  },
+  {
+    "t": 7.018887575,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 16
+  },
+  {
+    "t": 7.019036345,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 16
+  },
+  {
+    "t": 7.130668635,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 15
+  },
+  {
+    "t": 7.22117413,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 14
+  },
+  {
+    "t": 7.221278381,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 14
+  },
+  {
+    "t": 7.318733722,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 14
+  },
+  {
+    "t": 7.318959317,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 14
+  },
+  {
+    "t": 7.819047956,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 14
+  },
+  {
+    "t": 8.319245823,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 14
+  },
+  {
+    "t": 8.819413711,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 14
+  },
+  {
+    "t": 9.319586811,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 14
+  },
+  {
+    "t": 9.349221882,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 13
+  },
+  {
+    "t": 9.550655999,
+    "active": 2,
+    "waiting": 18,
+    "inactive": 12
+  },
+  {
+    "t": 9.634631874,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 12
+  },
+  {
+    "t": 9.635520628,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 12
+  },
+  {
+    "t": 10.135610715,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 12
+  },
+  {
+    "t": 10.149567224,
+    "active": 2,
+    "waiting": 17,
+    "inactive": 12
+  },
+  {
+    "t": 10.537532999,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 12
+  },
+  {
+    "t": 10.541983816,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 12
+  },
+  {
+    "t": 10.566682922,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 11
+  },
+  {
+    "t": 10.566801207,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 11
+  },
+  {
+    "t": 10.879450751,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 11
+  },
+  {
+    "t": 10.95736135,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 11
+  },
+  {
+    "t": 10.957484828,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 11
+  },
+  {
+    "t": 11.4506296,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 10
+  },
+  {
+    "t": 11.950801665,
+    "active": 2,
+    "waiting": 16,
+    "inactive": 10
+  },
+  {
+    "t": 12.369778874,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 10
+  },
+  {
+    "t": 12.369977308,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 10
+  },
+  {
+    "t": 12.677692556,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 9
+  },
+  {
+    "t": 12.677966385,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 9
+  },
+  {
+    "t": 13.178051284,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 9
+  },
+  {
+    "t": 13.678230694,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 9
+  },
+  {
+    "t": 13.906947459,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 9
+  },
+  {
+    "t": 14.407082454,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 9
+  },
+  {
+    "t": 14.708599925,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 8
+  },
+  {
+    "t": 14.708882331,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 8
+  },
+  {
+    "t": 14.724750527,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 7
+  },
+  {
+    "t": 14.724849297,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 7
+  },
+  {
+    "t": 14.818979675,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 6
+  },
+  {
+    "t": 14.819127617,
+    "active": 2,
+    "waiting": 15,
+    "inactive": 6
+  },
+  {
+    "t": 14.82199068,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 6
+  },
+  {
+    "t": 14.822087704,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 6
+  },
+  {
+    "t": 15.322173258,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 6
+  },
+  {
+    "t": 15.82237924,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 6
+  },
+  {
+    "t": 16.322537536,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 6
+  },
+  {
+    "t": 16.822693864,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 6
+  },
+  {
+    "t": 17.322848069,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 6
+  },
+  {
+    "t": 17.562776783,
+    "active": 2,
+    "waiting": 14,
+    "inactive": 6
+  },
+  {
+    "t": 17.710133871,
     "active": 2,
     "waiting": 13,
-    "inactive": 16
+    "inactive": 6
   },
   {
-    "t": 1.020603999,
+    "t": 17.710379729,
+    "active": 2,
+    "waiting": 13,
+    "inactive": 6
+  },
+  {
+    "t": 18.210466443,
+    "active": 2,
+    "waiting": 13,
+    "inactive": 6
+  },
+  {
+    "t": 18.710632534,
+    "active": 2,
+    "waiting": 13,
+    "inactive": 6
+  },
+  {
+    "t": 19.168787397,
     "active": 2,
     "waiting": 12,
-    "inactive": 16
+    "inactive": 6
   },
   {
-    "t": 1.020732329,
+    "t": 19.169137843,
     "active": 2,
     "waiting": 12,
-    "inactive": 16
+    "inactive": 6
   },
   {
-    "t": 1.201219214,
+    "t": 19.499863143,
     "active": 2,
     "waiting": 11,
-    "inactive": 16
+    "inactive": 6
   },
   {
-    "t": 1.201546073,
+    "t": 19.500144617,
     "active": 2,
     "waiting": 11,
-    "inactive": 16
+    "inactive": 6
   },
   {
-    "t": 1.701632732,
+    "t": 19.563731497,
     "active": 2,
     "waiting": 11,
-    "inactive": 16
+    "inactive": 6
   },
   {
-    "t": 1.807912902,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 15
-  },
-  {
-    "t": 2.308041931,
-    "active": 2,
-    "waiting": 12,
-    "inactive": 15
-  },
-  {
-    "t": 2.371030986,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 15
-  },
-  {
-    "t": 2.371172047,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 15
-  },
-  {
-    "t": 2.50305083,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 14
-  },
-  {
-    "t": 2.503423886,
-    "active": 2,
-    "waiting": 11,
-    "inactive": 14
-  },
-  {
-    "t": 2.521216148,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 14
-  },
-  {
-    "t": 2.5213531160000002,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 14
-  },
-  {
-    "t": 2.5857733080000003,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 14
-  },
-  {
-    "t": 2.618863095,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 14
-  },
-  {
-    "t": 2.6191839139999997,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 14
-  },
-  {
-    "t": 2.749861524,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 14
-  },
-  {
-    "t": 2.971566888,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 14
-  },
-  {
-    "t": 2.971890492,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 14
-  },
-  {
-    "t": 3.055664369,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 13
-  },
-  {
-    "t": 3.055751863,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 13
-  },
-  {
-    "t": 3.093106623,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 13
-  },
-  {
-    "t": 3.184752772,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 12
-  },
-  {
-    "t": 3.262176783,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 12
-  },
-  {
-    "t": 3.262411262,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 12
-  },
-  {
-    "t": 3.438161035,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 11
-  },
-  {
-    "t": 3.438430221,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 11
-  },
-  {
-    "t": 3.457197066,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 10
-  },
-  {
-    "t": 3.457288809,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 10
-  },
-  {
-    "t": 3.957372132,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 10
-  },
-  {
-    "t": 4.45850968,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 10
-  },
-  {
-    "t": 4.630339617,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 8
-  },
-  {
-    "t": 4.630557905,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 8
-  },
-  {
-    "t": 5.130645493,
-    "active": 2,
-    "waiting": 9,
-    "inactive": 8
-  },
-  {
-    "t": 5.616185002,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 7
-  },
-  {
-    "t": 6.116327525,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 7
-  },
-  {
-    "t": 6.616487211,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 7
-  },
-  {
-    "t": 7.11662932,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 7
-  },
-  {
-    "t": 7.486387953,
+    "t": 19.583920843,
     "active": 2,
     "waiting": 10,
     "inactive": 6
   },
   {
-    "t": 7.486729212,
+    "t": 19.584145169,
     "active": 2,
     "waiting": 10,
     "inactive": 6
   },
   {
-    "t": 7.986818375,
+    "t": 19.807739362,
     "active": 2,
     "waiting": 10,
     "inactive": 6
   },
   {
-    "t": 8.486987903,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 8.987143035999999,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 9.487286453,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 9.987440915,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 10.182599838,
-    "active": 2,
-    "waiting": 10,
-    "inactive": 6
-  },
-  {
-    "t": 10.325003988,
+    "t": 19.982329793,
     "active": 2,
     "waiting": 9,
     "inactive": 6
   },
   {
-    "t": 10.325314809,
+    "t": 19.982554293,
     "active": 2,
     "waiting": 9,
     "inactive": 6
   },
   {
-    "t": 10.328036403,
+    "t": 20.003760823,
+    "active": 2,
+    "waiting": 9,
+    "inactive": 6
+  },
+  {
+    "t": 20.01647808,
     "active": 2,
     "waiting": 8,
     "inactive": 6
   },
   {
-    "t": 10.328160397,
+    "t": 20.017548409,
     "active": 2,
     "waiting": 8,
     "inactive": 6
   },
   {
-    "t": 10.418599321,
+    "t": 20.055776159,
     "active": 2,
     "waiting": 8,
     "inactive": 6
   },
   {
-    "t": 10.605574439,
+    "t": 20.09305403,
     "active": 2,
     "waiting": 7,
     "inactive": 6
   },
   {
-    "t": 10.610019562,
+    "t": 20.093335037,
     "active": 2,
     "waiting": 7,
     "inactive": 6
   },
   {
-    "t": 10.760287819,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 5
-  },
-  {
-    "t": 10.77796431,
+    "t": 20.18193732,
     "active": 2,
     "waiting": 7,
-    "inactive": 5
+    "inactive": 6
   },
   {
-    "t": 10.778213739,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 5
-  },
-  {
-    "t": 11.278303087,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 5
-  },
-  {
-    "t": 11.624592072,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 12.124717877,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 12.630342477,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 13.130477204,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 13.631461212,
-    "active": 2,
-    "waiting": 8,
-    "inactive": 4
-  },
-  {
-    "t": 13.733492702,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 4
-  },
-  {
-    "t": 13.733683349,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 4
-  },
-  {
-    "t": 13.764433151,
-    "active": 2,
-    "waiting": 7,
-    "inactive": 4
-  },
-  {
-    "t": 13.799881063,
+    "t": 20.349906570999998,
     "active": 2,
     "waiting": 6,
-    "inactive": 4
+    "inactive": 6
   },
   {
-    "t": 13.799947504,
+    "t": 20.350205314,
     "active": 2,
     "waiting": 6,
-    "inactive": 4
+    "inactive": 6
   },
   {
-    "t": 14.300029927,
+    "t": 20.428807158,
     "active": 2,
     "waiting": 6,
-    "inactive": 4
+    "inactive": 6
   },
   {
-    "t": 14.319207489,
+    "t": 20.531925163,
     "active": 2,
     "waiting": 5,
-    "inactive": 4
+    "inactive": 6
   },
   {
-    "t": 14.319300339,
+    "t": 20.53206311,
     "active": 2,
     "waiting": 5,
-    "inactive": 4
+    "inactive": 6
   },
   {
-    "t": 14.81937854,
+    "t": 20.565844592,
     "active": 2,
-    "waiting": 5,
-    "inactive": 4
+    "waiting": 4,
+    "inactive": 6
   },
   {
-    "t": 14.846183425,
+    "t": 20.565996138,
     "active": 2,
-    "waiting": 5,
-    "inactive": 4
+    "waiting": 4,
+    "inactive": 6
   },
   {
-    "t": 14.903154062,
+    "t": 20.586198923,
+    "active": 2,
+    "waiting": 4,
+    "inactive": 6
+  },
+  {
+    "t": 20.600412856,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 6
+  },
+  {
+    "t": 20.600532836,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 6
+  },
+  {
+    "t": 20.60844548,
+    "active": 2,
+    "waiting": 4,
+    "inactive": 5
+  },
+  {
+    "t": 20.62234875,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 20.622498217,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 20.655681585,
+    "active": 2,
+    "waiting": 3,
+    "inactive": 5
+  },
+  {
+    "t": 20.661902814,
     "active": 2,
     "waiting": 4,
     "inactive": 4
   },
   {
-    "t": 14.906524107,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 4
-  },
-  {
-    "t": 15.406611664,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 4
-  },
-  {
-    "t": 15.497518701,
-    "active": 2,
-    "waiting": 4,
-    "inactive": 4
-  },
-  {
-    "t": 15.709162954,
+    "t": 20.683267913999998,
     "active": 2,
     "waiting": 3,
     "inactive": 4
   },
   {
-    "t": 15.709347988,
+    "t": 20.683368177,
     "active": 2,
     "waiting": 3,
     "inactive": 4
   },
   {
-    "t": 15.73957336,
-    "active": 2,
-    "waiting": 3,
-    "inactive": 4
-  },
-  {
-    "t": 15.755768269,
+    "t": 20.688076874,
     "active": 2,
     "waiting": 2,
     "inactive": 4
   },
   {
-    "t": 15.755881798,
+    "t": 20.688732516,
     "active": 2,
     "waiting": 2,
     "inactive": 4
   },
   {
-    "t": 15.795976127,
+    "t": 20.825357299,
     "active": 2,
-    "waiting": 3,
-    "inactive": 3
+    "waiting": 2,
+    "inactive": 4
   },
   {
-    "t": 15.822682562,
+    "t": 20.902784214,
+    "active": 2,
+    "waiting": 1,
+    "inactive": 4
+  },
+  {
+    "t": 20.903060995,
+    "active": 2,
+    "waiting": 1,
+    "inactive": 4
+  },
+  {
+    "t": 21.332056456,
     "active": 2,
     "waiting": 2,
     "inactive": 3
   },
   {
-    "t": 15.828459384,
+    "t": 21.832247533,
     "active": 2,
     "waiting": 2,
     "inactive": 3
   },
   {
-    "t": 16.328542625,
+    "t": 21.848674961,
     "active": 2,
     "waiting": 2,
     "inactive": 3
   },
   {
-    "t": 16.595389484000002,
+    "t": 22.351822702,
     "active": 2,
     "waiting": 2,
     "inactive": 3
   },
   {
-    "t": 17.095519335,
+    "t": 22.851979321,
     "active": 2,
     "waiting": 2,
     "inactive": 3
   },
   {
-    "t": 17.595654559,
+    "t": 23.352128691,
     "active": 2,
     "waiting": 2,
     "inactive": 3
   },
   {
-    "t": 18.020583019,
+    "t": 23.852269912,
+    "active": 2,
+    "waiting": 2,
+    "inactive": 3
+  },
+  {
+    "t": 23.857439992,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 18.020703413,
+    "t": 23.857555629,
     "active": 2,
     "waiting": 1,
     "inactive": 3
   },
   {
-    "t": 18.266434132,
+    "t": 23.951064249,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 23.951249152,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 23.981580253,
+    "active": 2,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 23.997714322,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 23.997974774,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 23.998547195,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000225516,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000245689,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.00026446,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000279637,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000300083,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000315366,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000336236,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000351604,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000369702,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.00038323,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000399307,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000412551,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000428426,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000444417,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000464115,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000480037,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000495373,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000508013,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.00052338,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.00053605,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000551539,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000564234,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000580111,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000593312,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000607976,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.00062117,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000636298,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000649528,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000665005,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000678141,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000693836,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000707088,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000722422,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000735595,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000750677,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000763488,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000778683,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000791752,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000807035,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000819884,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000835178,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000848117,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000863999,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000877269,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000892595,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000905581,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.00092101,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000936652,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000952792,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000968874,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.000984716,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.001000328,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.001015778,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.001031307,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.001047478,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.00106337,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.001078956,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.423564914,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 24.92372164,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 25.423866843,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 25.924021092,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 26.42416308,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 26.924307807,
+    "active": 1,
+    "waiting": 0,
+    "inactive": 3
+  },
+  {
+    "t": 27.020925618,
     "active": 2,
     "waiting": 1,
-    "inactive": 3
+    "inactive": 0
   },
   {
-    "t": 18.76658272,
-    "active": 2,
-    "waiting": 1,
-    "inactive": 3
-  },
-  {
-    "t": 19.268393295,
-    "active": 2,
-    "waiting": 1,
-    "inactive": 3
-  },
-  {
-    "t": 19.568860676,
-    "active": 2,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 19.569046381,
-    "active": 2,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 19.599476915,
-    "active": 2,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 19.61082576,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 19.610974302,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.111065395,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573780281,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573865752,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573885292,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573903854,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573922235,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573940961,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573962596,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.573985202,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574004543,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574024001,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574041958,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574062014,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574080041,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574102942,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574122125,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574142916,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574161241,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574183109,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574200758,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574218681,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574236327,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574253792,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574281861,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574299959,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574322229,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574343403,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574361926999998,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.57438226,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.5744026,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574420751,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.57444333,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.574463583,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 3
-  },
-  {
-    "t": 20.616397095,
+    "t": 27.021014618,
     "active": 2,
     "waiting": 1,
     "inactive": 0
   },
   {
-    "t": 20.616480121,
+    "t": 27.021105841,
     "active": 2,
     "waiting": 1,
     "inactive": 0
   },
   {
-    "t": 20.616529188,
-    "active": 2,
-    "waiting": 1,
-    "inactive": 0
-  },
-  {
-    "t": 20.697838644,
+    "t": 27.103438186,
     "active": 2,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.698162599,
+    "t": 27.104797993,
     "active": 2,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.788656403,
+    "t": 27.196445246,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 20.788849017,
+    "t": 27.196640186,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 21.288935044,
+    "t": 27.696731562,
     "active": 1,
     "waiting": 0,
     "inactive": 0
   },
   {
-    "t": 21.789082935,
-    "active": 1,
-    "waiting": 0,
-    "inactive": 0
-  },
-  {
-    "t": 21.982225247,
+    "t": 27.957020384,
     "active": 0,
     "waiting": 0,
     "inactive": 0
@@ -2027,244 +3146,332 @@ const CONCURRENCY_DATA = [
 ];
 const CPU_USAGE = [
   [
-    0.227027692,
+    0.219276978,
+    96.66666666666667
+  ],
+  [
+    0.426080923,
     100.0
   ],
   [
-    0.359261656,
+    0.539992829,
     100.0
   ],
   [
-    0.658873046,
+    0.754262927,
     100.0
   ],
   [
-    0.786903317,
+    0.87712274,
     100.0
   ],
   [
-    0.930962726,
+    1.055246365,
     100.0
   ],
   [
-    1.201220382,
+    1.2578288770000001,
     100.0
   ],
   [
-    1.701634802,
+    1.390458076,
     100.0
   ],
   [
-    1.807913366,
+    1.62373038,
     100.0
   ],
   [
-    2.308042254,
+    1.9586566109999999,
     100.0
   ],
   [
-    2.503139277,
+    2.489010375,
     100.0
   ],
   [
-    2.618863313,
+    2.594597505,
     100.0
   ],
   [
-    2.74986385,
+    2.85059183,
     100.0
   ],
   [
-    2.971567157,
+    3.124387221,
     100.0
   ],
   [
-    3.093108721,
+    3.4687483,
     100.0
   ],
   [
-    3.2621770469999998,
+    3.728783032,
     100.0
   ],
   [
-    3.438162258,
+    3.971250774,
     100.0
   ],
   [
-    3.957374413,
+    4.143541099,
     100.0
   ],
   [
-    4.4585100220000005,
+    4.390864815,
     100.0
   ],
   [
-    4.6303399039999995,
+    4.58428772,
     100.0
   ],
   [
-    5.130647739,
+    4.733023592,
     100.0
   ],
   [
-    5.616185382,
+    5.233337756,
     100.0
   ],
   [
-    6.116327868,
+    5.733529039,
     100.0
   ],
   [
-    6.616487571,
+    6.155772655,
     100.0
   ],
   [
-    7.116630066,
+    6.259383438,
     100.0
   ],
   [
-    7.486388239,
+    6.375316791,
     100.0
   ],
   [
-    7.98682055,
+    6.597193781,
     100.0
   ],
   [
-    8.48699805,
+    6.795069245,
     100.0
   ],
   [
-    8.987143394,
+    7.018888825,
     100.0
   ],
   [
-    9.487286798,
+    7.130669811,
     100.0
   ],
   [
-    9.987441564000001,
+    7.318734904,
     100.0
   ],
   [
-    10.182600176,
+    7.8190501260000005,
     100.0
   ],
   [
-    10.325004275,
+    8.319246311,
     100.0
   ],
   [
-    10.605574744,
+    8.819414441,
     100.0
   ],
   [
-    10.760288202,
+    9.319587169,
     100.0
   ],
   [
-    11.278305734,
+    9.550656396,
     100.0
   ],
   [
-    11.624592767,
+    10.135612799,
     100.0
   ],
   [
-    12.124718257,
+    10.537533273,
     100.0
   ],
   [
-    12.630342857,
+    10.879453351,
     100.0
   ],
   [
-    13.13047757,
+    11.450630687,
     100.0
   ],
   [
-    13.631461942,
+    11.95080225,
     100.0
   ],
   [
-    13.733493145,
+    12.369779128,
     100.0
   ],
   [
-    14.300032384,
+    12.677694844,
     100.0
   ],
   [
-    14.8193812,
+    13.178053457,
     100.0
   ],
   [
-    15.406614164,
+    13.678231304,
     100.0
   ],
   [
-    15.709163351,
+    13.906947785,
     100.0
   ],
   [
-    15.822682817,
+    14.407083045,
     100.0
   ],
   [
-    16.328545253,
+    14.708600244,
     100.0
   ],
   [
-    16.595389849,
+    14.818980881,
     100.0
   ],
   [
-    17.095519911,
+    15.322175542,
     100.0
   ],
   [
-    17.595655408,
+    15.82237994,
     100.0
   ],
   [
-    18.020583239,
+    16.322537939,
     100.0
   ],
   [
-    18.266435446,
+    16.822694305,
     100.0
   ],
   [
-    18.766583104,
+    17.322848455,
     100.0
   ],
   [
-    19.268393658,
+    17.562777189,
     100.0
   ],
   [
-    19.568861052,
+    17.710153128,
     100.0
   ],
   [
-    20.111065784,
+    18.210468461,
     100.0
   ],
   [
-    20.573780605,
+    18.710633106,
     100.0
   ],
   [
-    20.69783893,
-    80.76923076923077
-  ],
-  [
-    21.288935441,
+    19.168787859,
     100.0
   ],
   [
-    21.789083288,
-    99.0
+    19.49986456,
+    100.0
+  ],
+  [
+    19.807741896,
+    100.0
+  ],
+  [
+    19.982330145,
+    100.0
+  ],
+  [
+    20.093054251,
+    100.0
+  ],
+  [
+    20.349907035,
+    100.0
+  ],
+  [
+    20.531925616,
+    100.0
+  ],
+  [
+    20.6556836,
+    100.0
+  ],
+  [
+    20.825359439,
+    100.0
+  ],
+  [
+    21.332057502,
+    100.0
+  ],
+  [
+    21.832248166,
+    100.0
+  ],
+  [
+    22.351823096,
+    100.0
+  ],
+  [
+    22.851979717,
+    100.0
+  ],
+  [
+    23.352129206,
+    100.0
+  ],
+  [
+    23.852270465,
+    100.0
+  ],
+  [
+    23.981582319,
+    100.0
+  ],
+  [
+    24.423565155,
+    66.66666666666667
+  ],
+  [
+    24.923722453,
+    100.0
+  ],
+  [
+    25.423867264,
+    99.00990099009901
+  ],
+  [
+    25.924021471,
+    97.97979797979798
+  ],
+  [
+    26.4241634,
+    100.0
+  ],
+  [
+    26.924308173,
+    100.0
+  ],
+  [
+    27.103439287,
+    83.78378378378378
+  ],
+  [
+    27.696744762,
+    97.45762711864407
   ]
 ];
 // Position of the vertical axis.
